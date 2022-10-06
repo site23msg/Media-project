@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 @font-face {
     font-family:'Hurme Geometric Sans-4';
     src: local('Hummer') url(./fonts/HurmeGeometricSans4-Bold.otf) format('otf');
 }
-@tailwind utilities;
