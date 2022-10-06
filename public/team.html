@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"
+x-data="{toggle: false, img:false}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <title>23MSG | Media Sevices Group</title>
+</head>
+<body class="font-hummerBold tracking-widest lg:overflow-x-hidden"
+:class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
+    <section>
+        <nav class="flex justify-between p-10">
+            <div class="flex items-center gap-2">
+                <!-- <h4 class="font-bold text-2xl">23 |</h4>
+                <span class="text-xl">Media Services Group</span> -->
+                <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
+                 class="" src="/assets/23MediaServicesGrouplogo.png" alt="">
+                <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
+                class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="">
+                <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
+                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="">
+                 <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
+                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="">
+            </div>
+            <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
+                <li>
+                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                    href="index.html">About 23MSG</a>
+                </li>
+                <li>
+                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                    href="portfolio.html">Portfolio</a>
+                </li>   
+                <li class="">
+                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
+                    href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                    href="blog.html">Blog</a>
+                </li>
+                <label for="toggle" class="inline-flex relative items-center mr-5 cursor-pointer">
+                    <input type="checkbox" value="" id="toggle" class="sr-only peer" checked>
+                    <div :class="toggle == true ? 'bg-Lightblue' : 'bg-transparent'"
+                     class="w-12 h-7 border border-Lightblue rounded-full peer dark:peer-focus:ring-dark-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-[3px] after:bg-white after:border-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all" x-on:click="toggle = !toggle"></div>
+                </label>
+            </ul>
+            <div class="flex flex-col w-10 cursor-pointer relative lg:hidden">
+                <hr class="border-2 border-solid border-white mt-2">
+                <hr class="border-2 border-solid border-white mt-2">
+                <hr class="border-2 border-solid border-white mt-2">
+            </div>
+        </nav>
+    </section>
+        <section class="px-7 lg:px-40">
+            <div class="my-20 flex items-center justify-center">
+                <div class="flex flex-col items-center justify-center text-5xl lg:text-8xl font-bold">
+                    <h1>Team work</h1>
+                    <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
+                    <p class="text-center text-base font-light max-w-7xl lg:px-20 py-20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, rem vel incidunt minima vitae odit quas. Quibusdam ipsa pariatur fuga quo totam, modi magnam facere veniam natus incidunt, commodi iusto.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5" @mouseover.away="img = '0'">
+                <div class="lg:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '1'">
+                        <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/IMG_4139.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
+                           <a href="">
+                               <h4 class="font-bold text-3xl pt-10">Hencz Enikő</h4>
+                           </a>
+                           <p class="text-md lg:text-md">Graphics designer</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '2'">
+                        <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4152.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal"></div>
+                        <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="font-bold text-3xl pt-10">Hérán Barna</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Product manager</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '3'">
+                        <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4187.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="font-bold text-3xl pt-10">Pál Lili</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Content migration</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '4'">
+                        <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4224.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="font-bold text-3xl pt-10">Papp Zoltán</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Backend developer</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '5'">
+                        <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4298.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="font-bold text-3xl pt-10">Király Evelin</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Graphics designer</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '6'">
+                        <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4335.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="font-bold text-3xl pt-10">Kecskés Nobert</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Photo, video</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+            <div class="flex flex-col items-center pb-10 lg:hidden">
+                <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                <h4 class="text-xl">Media Services Group</h4>
+            </div>
+            <ul class="flex justify-between items-center lg:gap-10 w-full">
+                <div class="basis-1/2 lg:basis-96 flex justify-around items-center gap-4">
+                    <li class="text-sm lg:text-lg">
+                        <a href="index.html">About 23MSG</a>
+                    </li>
+                    <li class="text-sm lg:text-lg">
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>
+                </div>
+                <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
+                    <!-- <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                    <h4 class="text-xl">Media Services Group</h4> -->
+                    <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
+                    class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="">
+                    <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"
+                    class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="">
+                </li>
+                <div class="basis-1/2 lg:basis-96 flex justify-around items-center">
+                    <li class="text-sm lg:text-lg">
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li class="text-sm lg:text-lg">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
