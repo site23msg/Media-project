@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"
-x-data="{toggle: false, label: false, navbar: false}">
+x-data="{toggle: false, img:false,navbar: false}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="/docs/custom.css">
+    <link rel="stylesheet" href="custom.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="//db.onlinewebfonts.com/c/8c7c5cedb3dd34c518d04ab514ddfb92?family=Hurme+Geometric+Sans+4+W00+Lt" rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/f1631895ab87c699523b01ff210840a2?family=Hurme+Geometric+Sans+4+W00+Bold" rel="stylesheet" type="text/css"/>
-    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
     <title>23MSG | Media Sevices Group</title>
 </head>
 <style>
@@ -78,80 +77,95 @@ x-data="{toggle: false, label: false, navbar: false}">
         </ul>
     </nav>
 </section>
-    <main class="px-7 lg:px-40 flex justify-between flex-col my-20">
-        <div class="flex flex-col lg:flex-row justify-around">
-            <div class="basis-1/3 flex flex-col">
-                <h1 class="text-5xl lg:text-8xl Hurme-bold">Let's <span class="text-Lightblue">collaborate!</span></h1>
-                <div class="flex gap-10 flex-col items-start lg:flex-row justify-between lg:items-center text-base my-10 lg:my-10">
-                    <div class="flex flex-col">
-                        <label for="">Call us</label>
-                        <span class="Hurme-bold text-xl">+36 70 94 03 244</span>
+        <section class="px-7 lg:px-40">
+            <div class="my-20 flex items-center justify-center">
+                <div class="flex flex-col items-center justify-center text-5xl lg:text-8xl Hurme-bold">
+                    <h1>Team work</h1>
+                    <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
+                    <p class="text-center text-lg max-w-7xl lg:px-20 py-20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, rem vel incidunt minima vitae odit quas. Quibusdam ipsa pariatur fuga quo totam, modi magnam facere veniam natus incidunt, commodi iusto.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5" @mouseover.away="img = '0'">
+                <div class="lg:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '1'">
+                        <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/IMG_4139.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
+                           <a href="">
+                               <h4 class="Hurme-bold text-3xl pt-10">Hencz Enikő</h4>
+                           </a>
+                           <p class="text-md lg:text-md">Graphics designer</p>
+                       </div>
                     </div>
-                    <div class="flex flex-col">
-                        <label for="">E-mail us</label>
-                        <a class="Hurme-bold text-xl" href="">info@23msg.com</a>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '2'">
+                        <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4152.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal"></div>
+                        <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="Hurme-bold text-3xl pt-10">Hérán Barna</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Product manager</p>
                     </div>
-                    <div class="flex flex-col">
-                        <label for="">Follow us</label>
-                        <div class="flex justify-between">
-                            <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
-                             class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-instagram text-sm"></i>
-                            </div>
-                            <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
-                             class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-facebook-f text-sm"></i>
-                            </div>
-                            <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
-                             class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-youtube text-sm"></i>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '3'">
+                        <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4187.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="Hurme-bold text-3xl pt-10">Pál Lili</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Content migration</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '4'">
+                        <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4224.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="Hurme-bold text-3xl pt-10">Papp Zoltán</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Backend developer</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '5'">
+                        <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4298.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="Hurme-bold text-3xl pt-10">Király Evelin</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Graphics designer</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                    <div class="relative" @mouseover="img = '6'">
+                        <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4335.JPG" alt="project_photo">
+                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                        <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
+                        <a href="">
+                            <h4 class="Hurme-bold text-3xl pt-10">Kecskés Nobert</h4>
+                        </a>
+                        <p class="text-md lg:text-md">Photo, video</p>
+                    </div>
                     </div>
                 </div>
             </div>
-            <div class="basis-1/3">
-                <form action="" method="POST">
-                    <div class="flex flex-col gap-5 text-base">
-                        <div>
-                            <label :class="label == 'name' ? 'hidden' : ''"
-                             class="" for="">Name</label>
-                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
-                              class="" for="">Name</label>
-                            <input :class="toggle == false ? 'border-white text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-divideGray border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'name'">
-                        </div>
-                        <div>
-                            <label :class="label == 'Email' ? 'hidden' : ''"
-                             class="" for="">Email</label>
-                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
-                              class="" for="">Email</label>
-                            <input :class="toggle == false ? 'border-white text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-divideGray border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Email'">
-                        </div>
-                        <div>
-                            <label :class="label == 'Phone Number' ? 'hidden' : ''"
-                             class="" for="">Phone Number</label>
-                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"></label>
-                            <input :class="toggle == false ? 'border-white text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-divideGray border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Phone Number'">
-                        </div>
-                        <div>
-                            <label :class="label == 'Message'? 'hidden' : ''"
-                             class="" for="">Message</label>
-                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
-                              class="" for="">Message</label>
-                            <input :class="toggle == false ? 'border-white text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-divideGray border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Message'">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-center my-16 lg:my-20">
-                        <button :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                        class="border border-solid border-blue-600 py-2 px-6 text-xl rounded-full" type="submit">Send</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        </section>
     </main>
     <footer>
         <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">

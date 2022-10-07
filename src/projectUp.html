@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"
-x-data="{toggle: false, img:false,navbar: false}">
+x-data="{toggle: false, navbar: false}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="/docs/custom.css">
+    <link rel="stylesheet" href="custom.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="//db.onlinewebfonts.com/c/8c7c5cedb3dd34c518d04ab514ddfb92?family=Hurme+Geometric+Sans+4+W00+Lt" rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/f1631895ab87c699523b01ff210840a2?family=Hurme+Geometric+Sans+4+W00+Bold" rel="stylesheet" type="text/css"/>
@@ -77,95 +77,44 @@ x-data="{toggle: false, img:false,navbar: false}">
         </ul>
     </nav>
 </section>
-        <section class="px-7 lg:px-40">
-            <div class="my-20 flex items-center justify-center">
-                <div class="flex flex-col items-center justify-center text-5xl lg:text-8xl Hurme-bold">
-                    <h1>Team work</h1>
-                    <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
-                    <p class="text-center text-lg max-w-7xl lg:px-20 py-20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, rem vel incidunt minima vitae odit quas. Quibusdam ipsa pariatur fuga quo totam, modi magnam facere veniam natus incidunt, commodi iusto.</p>
-                </div>
+    <section>
+        <div class="flex justify-center lg:justify-between items-center text-5xl lg:text-8xl my-20 lg:px-20">
+            <!-- <img class="basis-1/2 w-1/2" src="/assets/23MSGlogo.png" alt=""> -->
+            <div class="items-center justify-center my-16 hidden lg:flex lg:my-20">
+                <button :class="toggle == true ? 'bg-white text-Lightblue border-Lightblue' : ''"
+                class="border border-solid border-white py-2 px-6 text-xl rounded-full">Previous projects</button>
             </div>
-            <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5" @mouseover.away="img = '0'">
-                <div class="lg:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '1'">
-                        <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/IMG_4139.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
-                        <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
-                           <a href="">
-                               <h4 class="Hurme-bold text-3xl pt-10">Hencz Enikő</h4>
-                           </a>
-                           <p class="text-md lg:text-md">Graphics designer</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '2'">
-                        <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4152.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal"></div>
-                        <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
-                        <a href="">
-                            <h4 class="Hurme-bold text-3xl pt-10">Hérán Barna</h4>
-                        </a>
-                        <p class="text-md lg:text-md">Product manager</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '3'">
-                        <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4187.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
-                        <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
-                        <a href="">
-                            <h4 class="Hurme-bold text-3xl pt-10">Pál Lili</h4>
-                        </a>
-                        <p class="text-md lg:text-md">Content migration</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '4'">
-                        <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4224.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
-                        <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
-                        <a href="">
-                            <h4 class="Hurme-bold text-3xl pt-10">Papp Zoltán</h4>
-                        </a>
-                        <p class="text-md lg:text-md">Backend developer</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '5'">
-                        <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4298.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
-                        <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
-                        <a href="">
-                            <h4 class="Hurme-bold text-3xl pt-10">Király Evelin</h4>
-                        </a>
-                        <p class="text-md lg:text-md">Graphics designer</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                    <div class="relative" @mouseover="img = '6'">
-                        <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/IMG_4335.JPG" alt="project_photo">
-                        <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
-                        <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
-                        <a href="">
-                            <h4 class="Hurme-bold text-3xl pt-10">Kecskés Nobert</h4>
-                        </a>
-                        <p class="text-md lg:text-md">Photo, video</p>
-                    </div>
-                    </div>
-                </div>
+            <h1 class="flex flex-wrap text-center lg:block Hurme-bold">Agrohof Branding</h1>
+            <div class="items-center justify-center my-16 hidden lg:flex lg:my-20">
+                <button :class="toggle == true ? 'bg-white text-Lightblue border-Lightblue' : ''"
+                class="border border-solid border-white py-2 px-6 text-xl rounded-full">Next projects</button>
             </div>
-        </section>
+        </div>
+        <p class="text-center px-7 lg:px-80">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
+        </p>
+    </section>
+    <main class="px-7 my-20 lg:px-40">
+        <div class="flex flex-col items-center justify-center lg:gap-14 lg:grid lg:grid-cols-2 px-40">
+            <div class="lg:col-span-2 lg:justify-self-center">
+                <img class="hidden lg:block rounded-3xl object-cover w-full lg:max-w-[1200px] lg:h-[800px]" src="https://picsum.photos/1200/800" alt="project_photo">
+                <img class="lg:hidden" src="/img/apps.46943.9007199266245148.65716085-8f7e-40af-9dd6-34b7bc30c6dd.png" alt="project_photo">
+            </div>
+            <div class="hidden lg:block lg:col-span-1 lg:justify-self-center">
+                <img class="rounded-3xl object-cover w-full lg:max-w-[600px] lg:h-[400px]" src="https://picsum.photos/600/400" alt="project_photo">
+                <img class="lg:hidden" src="/img/apps.46943.9007199266245148.65716085-8f7e-40af-9dd6-34b7bc30c6dd.png" alt="project_photo">
+            </div>
+            <div class="hidden lg:block lg:col-span-1 lg:justify-self-center">
+                <img class="rounded-3xl object-cover w-full lg:max-w-[600px] lg:h-[400px]" src="https://picsum.photos/600/400" alt="project_photo">
+                <img class="lg:hidden" src="/img/apps.46943.9007199266245148.65716085-8f7e-40af-9dd6-34b7bc30c6dd.png" alt="project_photo">
+            </div>
+            <div class="hidden lg:block lg:col-span-2 lg:justify-self-center">
+                <img class="rounded-3xl object-cover w-full lg:max-w-[1200px] lg:h-[800px]" src="https://picsum.photos/1200/800" alt="project_photo">
+                <img class="lg:hidden" src="/img/apps.46943.9007199266245148.65716085-8f7e-40af-9dd6-34b7bc30c6dd.png" alt="project_photo">
+            </div>
+        </div>
     </main>
     <footer>
         <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">
@@ -176,7 +125,7 @@ x-data="{toggle: false, img:false,navbar: false}">
             <ul class="flex justify-between items-center lg:gap-10 w-full">
                 <div class="basis-1/2 lg:basis-96 flex justify-around items-center gap-4">
                     <li class="text-sm lg:text-lg">
-                        <a href="index.html">About 23MSG</a>
+                        <a href="about.html">About 23MSG</a>
                     </li>
                     <li class="text-sm lg:text-lg">
                         <a href="portfolio.html">Portfolio</a>
