@@ -6,23 +6,21 @@ x-data="{toggle: false, navbar: false}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/docs/custom.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-    </script>
+    <link href="//db.onlinewebfonts.com/c/8c7c5cedb3dd34c518d04ab514ddfb92?family=Hurme+Geometric+Sans+4+W00+Lt" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/f1631895ab87c699523b01ff210840a2?family=Hurme+Geometric+Sans+4+W00+Bold" rel="stylesheet" type="text/css"/>
     <title>23MSG | Media Sevices Group</title>
-    <style>
-        [x-cloak] { display: none !important; }
-    </style>
 </head>
-<body class="font-hummerBold tracking-widest lg:overflow-x-hidden"
+<style>
+    [x-cloak] { display: none !important; }
+</style>
+<body class="Hurme-thin tracking-widest lg:overflow-x-hidden"
 :class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
     <section class="relative">
         <nav class="flex justify-between p-10">
             <div class="flex items-center gap-2">
-                <!-- <h4 class="font-bold text-2xl">23 |</h4>
+                <!-- <h4 class="Hurme-bold text-2xl">23 |</h4>
                 <span class="text-xl">Media Services Group</span> -->
                 <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
                  class="" src="/assets/23MediaServicesGrouplogo.png" alt="">
@@ -65,31 +63,31 @@ x-data="{toggle: false, navbar: false}">
             class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
                 <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
                 <li>
-                    <a href="index.html">About 23MSG</a>
+                    <a href="index.html">About</a>
                 </li>
                 <li>
                     <a href="portfolio.html">Portfolio</a>
                 </li>   
                 <li class="">
-                    <a  href="contact.html">Contact</a>
+                    <a  href="blog.html">Blog</a>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
     </section>
     <main class="px-7 lg:px-40">
-        <section class="mt-20 relative">
-            <div class="flex flex-col justify-center items-center h-screen">
-                <div class="lg:hidden">
-                    <img class="rounded-md object-cover p-0" src="/img/welcome_img.png" alt="">
+        <section class="lg:mt-20 relative">
+            <div class="flex gap-16 lg:gap-0 flex-col justify-center items-center h-screen">
+                <div class="lg:hidden w-full">
+                    <img class="rounded-md object-cover absolute top-0 -left-4 h-80" src="/img/welcome_img.png" alt="">
                 </div>
-                <div class="my-20 max-w-xl flex flex-col items-center lg:items-start justify-center gap-10 lg:absolute lg:left-0 lg:top-16">
-                    <h1 class="text-6xl text-center lg:text-8xl lg:text-left font-bold">Welcome at 23MSG!</h1>
+                <div class="max-w-xl flex flex-col items-center lg:items-start justify-center gap-10 lg:absolute lg:left-0 lg:top-16">
+                    <h1 class="text-6xl text-center lg:text-8xl lg:text-left Hurme-bold">Welcome at 23MSG!</h1>
                     <div>
                         <a :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                        class="border border-blue-600 py-2 px-6 text-xl rounded-full" href="team.html">About us</a>
+                        class="border border-blue-600 py-2 px-6 text-xs lg:text-xl rounded-full" href="team.html">About us</a>
                     </div>
                 </div>
                 <div class="hidden w-4/5 lg:block lg:absolute lg:-right-56 lg:top-0">
@@ -99,21 +97,21 @@ x-data="{toggle: false, navbar: false}">
         </section>
         <section class="mt-10 mb-20">
             <div>
-                <h1 class="text-center text-3xl lg:text-7xl font-bold flex justify-center items-center lg:mb-32">What we do?</h1>
+                <h1 class="text-center text-3xl lg:text-7xl Hurme-bold flex justify-center items-center lg:mb-32 pb-24">What we do?</h1>
                 <div class="flex flex-col lg:flex-row  items-center justify-between gap-y-10">
-                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 lg:border-b-0 lg:border-r-4 border-opacity-[0.11] pb-10 lg:pb-0">
+                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-b-0 lg:border-r-4 border-opacity-[0.11] pb-10 lg:pb-0">
                         <img class="w-16 h-16 lg:w-24 lg:h-24" src="/img/Design.png" alt="">
-                        <h2 class="font-bold text-2xl lg:text-3xl my-5">Graphic and web</h2>
+                        <h2 class="Hurme-bold text-2xl lg:text-3xl my-16">Graphic and web</h2>
                         <p class="text-center text-lg max-w-[344px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquam modi odio porro ipsum perferendis unde ut minima! Ullam officia e.</p>
                     </div>
-                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 lg:border-b-0 lg:border-r-4 border-opacity-[0.11] pb-10 lg:pb-0">
+                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-b-0 lg:border-r-4 border-opacity-[0.11] pb-10 lg:pb-0">
                         <img class="w-16 h-16 lg:w-24 lg:h-24" src="/img/photo.png" alt="">
-                        <h2 class="font-bold text-2xl lg:text-3xl my-5">Photo and video</h2>
+                        <h2 class="Hurme-bold text-2xl lg:text-3xl my-16">Photo and video</h2>
                         <p class="text-center text-lg max-w-[344px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestias minus modi ut, delectus voluptate voluptas nobis maxime veniam is.</p>
                     </div>
                     <div class="flex flex-col items-center justify-center basis-1/3">
                         <img class="w-16 h-16 lg:w-24 lg:h-24" src="/img/ad.png" alt="">
-                        <h2 class="font-bold text-2xl lg:text-3xl my-5">Advertisement</h2>
+                        <h2 class="Hurme-bold text-2xl lg:text-3xl my-16">Advertisement</h2>
                         <p class="text-center text-lg max-w-[344px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto ex porro id nisi, odio cupiditate totam veritatis facilis laborum et dores!</p>
                     </div>
                 </div>
@@ -122,7 +120,7 @@ x-data="{toggle: false, navbar: false}">
         <section class="">
             <div class="my-20 flex items-center justify-center">
                 <div class="basis-1/4 flex items-center justify-center">
-                    <h1  class="text-3xl lg:text-6xl font-bold lg:my-32">Projects</h1>
+                    <h1  class="text-3xl lg:text-6xl Hurme-bold lg:my-32">Projects</h1>
                 </div>
             </div>
             <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5">
@@ -130,7 +128,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="projectUp.html">
-                            <h4 class="font-bold text-2xl pt-10">BouHouf Branding</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">BouHouf Branding</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -139,7 +137,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="">
-                            <h4 class="font-bold text-2xl pt-10">Project name</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">Project name</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -148,7 +146,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="">
-                            <h4 class="font-bold text-2xl pt-10">Project name</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">Project name</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -157,7 +155,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="">
-                            <h4 class="font-bold text-2xl pt-10">Project name</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">Project name</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -166,7 +164,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="">
-                            <h4 class="font-bold text-2xl pt-10">Project name</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">Project name</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -175,7 +173,7 @@ x-data="{toggle: false, navbar: false}">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="https://picsum.photos/300/300" alt="project_photo">
                     <div class="w-80 pl-4">
                         <a href="">
-                            <h4 class="font-bold text-2xl pt-10">Project name</h4>
+                            <h4 class="Hurme-bold text-2xl pt-10">Project name</h4>
                         </a>
                         <p class="text-md lg:text-lg">Lorem ipsum dolore, cupiditate atque</p>
                     </div>
@@ -188,9 +186,9 @@ x-data="{toggle: false, navbar: false}">
         </section>
     </main>
     <footer>
-        <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+        <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
             <div class="flex flex-col items-center pb-10 lg:hidden">
-                <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
                 <h4 class="text-xl">Media Services Group</h4>
             </div>
             <ul class="flex justify-between items-center lg:gap-10 w-full">
@@ -203,7 +201,7 @@ x-data="{toggle: false, navbar: false}">
                     </li>
                 </div>
                 <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
-                    <!-- <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                    <!-- <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
                     <h4 class="text-xl">Media Services Group</h4> -->
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="">

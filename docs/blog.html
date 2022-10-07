@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"
-x-data="{toggle: false}">
+x-data="{toggle: false, navbar: false}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/docs/custom.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
+    <link href="//db.onlinewebfonts.com/c/8c7c5cedb3dd34c518d04ab514ddfb92?family=Hurme+Geometric+Sans+4+W00+Lt" rel="stylesheet" type="text/css"/>
+    <link href="//db.onlinewebfonts.com/c/f1631895ab87c699523b01ff210840a2?family=Hurme+Geometric+Sans+4+W00+Bold" rel="stylesheet" type="text/css"/>
     <title>23MSG | Media Sevices Group</title>
     <!-- <script>
         $(function(){
@@ -21,57 +18,76 @@ x-data="{toggle: false}">
           });
     </script> -->
 </head>
-<body class="font-hummerBold tracking-widest lg:overflow-x-hidden"
+<style>
+    [x-cloak] { display: none !important; }
+</style>
+<body class="Hurme-thin tracking-widest lg:overflow-x-hidden"
 :class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
-    <section> 
-        <nav class="flex justify-between p-10">
-            <div class="flex items-center gap-2">
-                <!-- <h4 class="font-bold text-2xl">23 |</h4>
-                <span class="text-xl">Media Services Group</span> -->
-                <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
-                 class="" src="/assets/23MediaServicesGrouplogo.png" alt="">
-                <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
-                class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="">
-                <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
-                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="">
-                 <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
-                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="">
-            </div>
-            <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="index.html">About 23MSG</a>
-                </li>
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="portfolio.html">Portfolio</a>
-                </li>   
-                <li class="">
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
-                    href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="blog.html">Blog</a>
-                </li>
-                <label for="toggle" class="inline-flex relative items-center mr-5 cursor-pointer">
-                    <input type="checkbox" value="" id="toggle" class="sr-only peer" checked>
-                    <div :class="toggle == true ? 'bg-Lightblue' : 'bg-transparent'"
-                     class="w-12 h-7 border border-Lightblue rounded-full peer dark:peer-focus:ring-dark-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-[3px] after:bg-white after:border-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all" x-on:click="toggle = !toggle"></div>
-                </label>
-            </ul>
-            <div class="flex flex-col w-10 cursor-pointer relative lg:hidden">
-                <hr class="border-2 border-solid border-white mt-2">
-                <hr class="border-2 border-solid border-white mt-2">
-                <hr class="border-2 border-solid border-white mt-2">
-            </div>
-        </nav>
-    </section>
+<section class="relative">
+    <nav class="flex justify-between p-10">
+        <div class="flex items-center gap-2">
+            <!-- <h4 class="Hurme-bold text-2xl">23 |</h4>
+            <span class="text-xl">Media Services Group</span> -->
+            <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
+             class="" src="/assets/23MediaServicesGrouplogo.png" alt="">
+            <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
+            class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="">
+            <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
+             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="">
+             <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
+             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="">
+        </div>
+        <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
+            <li>
+                <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                href="index.html">About 23MSG</a>
+            </li>
+            <li>
+                <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                href="portfolio.html">Portfolio</a>
+            </li>   
+            <li class="">
+                <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
+                href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                href="blog.html">Blog</a>
+            </li>
+            <label for="toggle" class="relative items-center mr-5 cursor-pointer">
+                <input type="checkbox" value="" id="toggle" class="sr-only peer" checked>
+                <div :class="toggle == true ? 'bg-Lightblue' : 'bg-transparent'"
+                 class="w-12 h-7 border border-Lightblue rounded-full peer dark:peer-focus:ring-dark-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-[3px] after:bg-white after:border-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all" x-on:click="toggle = !toggle"></div>
+            </label>
+        </ul>
+        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar">
+            <hr class="border-2 border-solid border-white mt-2">
+            <hr class="border-2 border-solid border-white mt-2">
+            <hr class="border-2 border-solid border-white mt-2">
+        </div>
+        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 lg:hidden transfrom transition-all duration-600' : 'absolute text-3xl top-0 left-0 transfrom transition-all duration-600'"
+        class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
+            <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
+            <li>
+                <a href="index.html">About</a>
+            </li>
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>   
+            <li class="">
+                <a  href="blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</section>
     <section>
         <div class="flex justify-center gap-6 items-center text-5xl lg:text-8xl my-20">
             <!-- <img class="basis-1/2 w-1/2" src="/assets/23MSGlogo.png" alt=""> -->
             <h1 class="hidden lg:block">23<span>MSG</span></h1>
-            <h1 class="font-bold ">Blog</h1>
+            <h1 class="Hurme-bold ">Blog</h1>
         </div>
     </section>
     <main class="px-7 flex flex-wrap justify-between gap-y-20 gap-x-5 gap-4 flex-col my-20 lg:px-40 lg:flex-row lg:justify-between">
@@ -85,13 +101,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -109,13 +125,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -133,13 +149,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -157,13 +173,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -181,13 +197,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -205,13 +221,13 @@ x-data="{toggle: false}">
                     <img :class="toggle == true ? 'block' : 'hidden'"
                     class="w-5 h-5" src="/assets/eye 3_blue.png" alt="">
                     <span :class="toggle == false ? '' : 'text-Lightblue'"
-                     class="font-bold text-xl">10 min</span>
+                     class="Hurme-bold text-xl">10 min</span>
                 </div>
             </div>
             <div :class="toggle == false ? 'bg-Darkgray' : 'bg-Lightgraytoggle'"
              class="p-4 rounded-b-3xl">
                 <div class="flex justify-between">
-                    <h4 class="font-bold text-2xl pb-8">BouHouf Branding</h4>
+                    <h4 class="Hurme-bold text-2xl pb-8">BouHouf Branding</h4>
                     <div class="rounded-full w-10 h-10 bg-Lightblue flex items-center justify-center">
                         <img class="w-5 h-5" src="/assets/eye 3.png" alt="">
                     </div>
@@ -223,7 +239,7 @@ x-data="{toggle: false}">
     <footer>
         <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">
             <div class="flex flex-col items-center pb-10 lg:hidden">
-                <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
                 <h4 class="text-xl">Media Services Group</h4>
             </div>
             <ul class="flex justify-between items-center lg:gap-10 w-full">
@@ -236,7 +252,7 @@ x-data="{toggle: false}">
                     </li>
                 </div>
                 <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
-                    <!-- <h3 class="text-6xl"><span class="font-bold">23</span>MSG</h3>
+                    <!-- <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
                     <h4 class="text-xl">Media Services Group</h4> -->
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="">
