@@ -1,14 +1,12 @@
 {
-  "name": "MSG_home",
+  "name": "msg_home",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
-  "dependencies": {
-    "tailwindcss": "^3.1.8"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build-alpine":"npx esbuild src/app.js --outfile=dist/app.js --bundle --watch"
   },
   "repository": {
     "type": "git",
@@ -20,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/site23msg/site23msg.github.io/issues"
   },
-  "homepage": "https://github.com/site23msg/site23msg.github.io#readme"
+  "homepage": "https://github.com/site23msg/site23msg.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "alpinejs": "^3.10.4",
+    "esbuild": "^0.15.10"
+  }
 }

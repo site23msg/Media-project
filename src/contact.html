@@ -7,30 +7,28 @@ x-data="{toggle: false, label: false, navbar: false}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="stylesheet" href="custom.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link href="//db.onlinewebfonts.com/c/8c7c5cedb3dd34c518d04ab514ddfb92?family=Hurme+Geometric+Sans+4+W00+Lt" rel="stylesheet" type="text/css"/>
-    <link href="//db.onlinewebfonts.com/c/f1631895ab87c699523b01ff210840a2?family=Hurme+Geometric+Sans+4+W00+Bold" rel="stylesheet" type="text/css"/>
     <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
     <title>23MSG | Media Sevices Group</title>
+    <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
 </head>
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="Hurme-thin tracking-widest lg:overflow-x-hidden"
+<body class="font-Hurmethin tracking-widest lg:overflow-x-hidden"
 :class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
 <section class="relative">
     <nav class="flex justify-between p-10">
         <div class="flex items-center gap-2">
-            <!-- <h4 class="Hurme-bold text-2xl">23 |</h4>
+            <!-- <h4 class="font-Hurmebold text-2xl">23 |</h4>
             <span class="text-xl">Media Services Group</span> -->
             <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
-             class="" src="/assets/23MediaServicesGrouplogo.png" alt="">
+             class="" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
             <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
-            class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="">
+            class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
             <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
-             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="">
+             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
              <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
-             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="">
+             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
         </div>
         <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
             <li>
@@ -49,11 +47,14 @@ x-data="{toggle: false, label: false, navbar: false}">
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                 href="blog.html">Blog</a>
             </li>
-            <label for="toggle" class="relative items-center mr-5 cursor-pointer">
-                <input type="checkbox" value="" id="toggle" class="sr-only peer" checked>
-                <div :class="toggle == true ? 'bg-Lightblue' : 'bg-transparent'"
-                 class="w-12 h-7 border border-Lightblue rounded-full peer dark:peer-focus:ring-dark-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-[3px] after:bg-white after:border-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all" x-on:click="toggle = !toggle"></div>
+            <li>
+                <label for="default-toggle" class="relative cursor-pointer">
+                <input type="checkbox" value="" id="default-toggle" class="sr-only peer" aria-labelledby="default-toggle">
+                <div :class=" toggle == false ? 'after:bg-white' : 'after:bg-Lightblue'"
+                class="w-[53px] h-[30px] border-2 border-white bg-transparent peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[6px] after:left-[6px] after:border after:rounded-full after:h-[18px] after:w-[18px] after:transition-all peer-checked:border-Lightblue" x-on:click="toggle = !toggle">
+                </div>
             </label>
+            </li>
         </ul>
         <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar">
             <hr class="border-2 border-solid border-white mt-2">
@@ -81,15 +82,15 @@ x-data="{toggle: false, label: false, navbar: false}">
     <main class="px-7 lg:px-40 flex justify-between flex-col my-20">
         <div class="flex flex-col lg:flex-row justify-around">
             <div class="basis-1/3 flex flex-col">
-                <h1 class="text-5xl lg:text-8xl Hurme-bold">Let's <span class="text-Lightblue">collaborate!</span></h1>
+                <h1 class="text-5xl lg:text-8xl font-Hurmebold">Let's <span class="text-Lightblue">collaborate!</span></h1>
                 <div class="flex gap-10 flex-col items-start lg:flex-row justify-between lg:items-center text-base my-10 lg:my-10">
                     <div class="flex flex-col">
                         <label for="">Call us</label>
-                        <span class="Hurme-bold text-xl">+36 70 94 03 244</span>
+                        <span class="font-Hurmebold text-xl">+36 70 94 03 244</span>
                     </div>
                     <div class="flex flex-col">
                         <label for="">E-mail us</label>
-                        <a class="Hurme-bold text-xl" href="">info@23msg.com</a>
+                        <a class="font-Hurmebold text-xl" href="">info@23msg.com</a>
                     </div>
                     <div class="flex flex-col">
                         <label for="">Follow us</label>
@@ -118,31 +119,31 @@ x-data="{toggle: false, label: false, navbar: false}">
                              class="" for="">Name</label>
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Name</label>
-                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'name'">
+                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'name'">
                         </div>
                         <div>
                             <label :class="label == 'Email' ? 'hidden' : ''"
                              class="" for="">Email</label>
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Email</label>
-                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Email'">
+                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Email'">
                         </div>
                         <div>
                             <label :class="label == 'Phone Number' ? 'hidden' : ''"
                              class="" for="">Phone Number</label>
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"></label>
-                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Phone Number'">
+                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Phone Number'">
                         </div>
                         <div>
                             <label :class="label == 'Message'? 'hidden' : ''"
                              class="" for="">Message</label>
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Message</label>
-                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 Hurme-bold boder-opacity-[11%] outline-0" type="text" @keydown="label = 'Message'">
+                            <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Message'">
                         </div>
                     </div>
                     <div class="flex items-center justify-center my-16 lg:my-20">
@@ -154,38 +155,43 @@ x-data="{toggle: false, label: false, navbar: false}">
         </div>
     </main>
     <footer>
-        <nav class="pb-20 px-5 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+        <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
             <div class="flex flex-col items-center pb-10 lg:hidden">
-                <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
-                <h4 class="text-xl">Media Services Group</h4>
+                <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
+                class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
             </div>
             <ul class="flex justify-between items-center lg:gap-10 w-full">
-                <div class="basis-1/2 lg:basis-96 flex justify-around items-center gap-4">
-                    <li class="text-sm lg:text-lg">
-                        <a href="index.html">About 23MSG</a>
-                    </li>
-                    <li class="text-sm lg:text-lg">
-                        <a href="portfolio.html">Portfolio</a>
-                    </li>
+                <div class="basis-1/2 lg:basis-96">
+                    <ul class="flex justify-around items-center gap-4">
+                        <li class="text-sm lg:text-lg">
+                            <a href="index.html">About 23MSG</a>
+                        </li>
+                        <li class="text-sm lg:text-lg">
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                    </ul>
                 </div>
                 <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
-                    <!-- <h3 class="text-6xl"><span class="Hurme-bold">23</span>MSG</h3>
+                    <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
                     <h4 class="text-xl">Media Services Group</h4> -->
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
-                    class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="">
+                    class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                     <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"
-                    class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="">
+                    class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </li>
-                <div class="basis-1/2 lg:basis-96 flex justify-around items-center">
-                    <li class="text-sm lg:text-lg">
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li class="text-sm lg:text-lg">
-                        <a href="contact.html">Contact</a>
-                    </li>
+                <div class="basis-1/2 lg:basis-96">
+                    <ul class="flex justify-around items-center">
+                        <li class="text-sm lg:text-lg">
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li class="text-sm lg:text-lg">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </ul>
         </nav>
     </footer>
+    <script src="/dist/app.js"></script>
 </body>
 </html>
