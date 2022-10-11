@@ -6,7 +6,6 @@ x-data="{toggle: false, label: false, navbar: false}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="custom.css">
     <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
     <title>23MSG | Media Sevices Group</title>
     <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
@@ -30,7 +29,7 @@ x-data="{toggle: false, label: false, navbar: false}">
              <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
              class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
         </div>
-        <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
+        <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                 href="index.html">About 23MSG</a>
@@ -48,20 +47,29 @@ x-data="{toggle: false, label: false, navbar: false}">
                 href="blog.html">Blog</a>
             </li>
             <li>
-                <label for="default-toggle" class="relative cursor-pointer">
+                <div :class="toggle == false ? 'bg-Lightblue text-white text-lg rounded-full p-2' :'bg-Lightblue text-white font-bold text-lg rounded-full p-2'"
+                class="flex justify-center items-center cursor-pointer lg:hidden xl:block">
+                    <i class="fa-solid fa-phone"></i><a href="https://wa.me/0036709403244">+36 70 94 03 244</a>
+                </div>
+            </li>
+            <li>
+                <label for="default-toggle" class="relative cursor-pointer" title="Switch display mode">
                 <input type="checkbox" value="" id="default-toggle" class="sr-only peer" aria-labelledby="default-toggle">
                 <div :class=" toggle == false ? 'after:bg-white' : 'after:bg-Lightblue'"
                 class="w-[53px] h-[30px] border-2 border-white bg-transparent peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[6px] after:left-[6px] after:border after:rounded-full after:h-[18px] after:w-[18px] after:transition-all peer-checked:border-Lightblue" x-on:click="toggle = !toggle">
                 </div>
-            </label>
+                </label>
             </li>
         </ul>
-        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
+        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+                class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
         </div>
-        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 lg:hidden transfrom transition-all duration-600' : 'absolute text-3xl top-0 left-0 transfrom transition-all duration-600'"
+        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute text-3xl -translate-x-[40px] top-0 transfrom transition-all duration-700'"
         class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
             <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
             <li>
@@ -79,33 +87,41 @@ x-data="{toggle: false, label: false, navbar: false}">
         </ul>
     </nav>
 </section>
-    <main class="px-7 lg:px-40 flex justify-between flex-col my-20">
+    <main class="px-7 lg:px-20 xl:px-40 flex justify-between flex-col my-20">
         <div class="flex flex-col lg:flex-row justify-around">
             <div class="basis-1/3 flex flex-col">
-                <h1 class="text-5xl lg:text-8xl font-Hurmebold">Let's <span class="text-Lightblue">collaborate!</span></h1>
-                <div class="flex gap-10 flex-col items-start lg:flex-row justify-between lg:items-center text-base my-10 lg:my-10">
+                <h1 class="text-5xl xl:text-8xl font-Hurmebold">Let's <span class="text-Lightblue">collaborate!</span></h1>
+                <div class="flex gap-10 flex-col items-start xl:flex-row justify-between xl:items-center text-base my-10 lg:my-10">
                     <div class="flex flex-col">
                         <label for="">Call us</label>
-                        <span class="font-Hurmebold text-xl">+36 70 94 03 244</span>
+                        <a href="">
+                            <span class="font-Hurmebold text-xl">+36 70 94 03 244</span>
+                        </a>
                     </div>
                     <div class="flex flex-col">
                         <label for="">E-mail us</label>
-                        <a class="font-Hurmebold text-xl" href="">info@23msg.com</a>
+                        <a class="font-Hurmebold text-xl" href="mailto:info@23msg.com">info@23msg.com</a>
                     </div>
                     <div class="flex flex-col">
                         <label for="">Follow us</label>
                         <div class="flex justify-between">
                             <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
                              class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-instagram text-sm"></i>
+                                <a href="https://instagram.com/23msg.official?igshid=YmMyMTA2M2Y=">
+                                    <i class="fa-brands fa-instagram text-sm"></i>
+                                </a>
                             </div>
                             <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
                              class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                                </a>
                             </div>
                             <div :class="toggle == false ? 'bg-white text-Darkblue' : 'bg-Darkblue text-white'"
                              class="flex items-center justify-center rounded-full w-5 h-5">
-                                <i class="fa-brands fa-youtube text-sm"></i>
+                                <a href="">
+                                    <i class="fa-brands fa-youtube text-sm"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +136,7 @@ x-data="{toggle: false, label: false, navbar: false}">
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Name</label>
                             <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'name'">
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'name'">
                         </div>
                         <div>
                             <label :class="label == 'Email' ? 'hidden' : ''"
@@ -128,14 +144,14 @@ x-data="{toggle: false, label: false, navbar: false}">
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Email</label>
                             <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Email'">
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Email'">
                         </div>
                         <div>
-                            <label :class="label == 'Phone Number' ? 'hidden' : ''"
+                            <label :class="label == 'Phone' ? 'hidden' : ''"
                              class="" for="">Phone Number</label>
-                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"></label>
+                             <label :class="toggle == false ? 'text-Darkblue' : 'text-white'">Phone Number</label>
                             <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Phone Number'">
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Phone'">
                         </div>
                         <div>
                             <label :class="label == 'Message'? 'hidden' : ''"
@@ -143,7 +159,7 @@ x-data="{toggle: false, label: false, navbar: false}">
                              <label :class="toggle == false ? 'text-Darkblue' : 'text-white'"
                               class="" for="">Message</label>
                             <input :class="toggle == false ? 'border-divideGray text-white' : 'border-divideGray border-opacity-[0.11]'"
-                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0  border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Message'">
+                             class="bg-transparent w-full border-l-0 border-r-0 border-t-0 border-4 font-Hurmebold outline-0" type="text" @keydown="label = 'Message'">
                         </div>
                     </div>
                     <div class="flex items-center justify-center my-16 lg:my-20">
@@ -154,6 +170,22 @@ x-data="{toggle: false, label: false, navbar: false}">
             </div>
         </div>
     </main>
+    <div class="fixed bottom-10 right-10 flex gap-4">
+        <a href="https://wa.me/0036709403244">
+            <div :class="toggle == false ? 'bg-lime-700' : 'bg-Darkblue'"
+            class="w-14 h-14 rounded-full flex items-center justify-center" title="Call us">
+                <i :class="toggle == false ? 'text-white' : 'text-white'"
+                class="fa-brands fa-whatsapp cursor-pointer text-3xl"></i>
+            </div>
+        </a>
+        <a href="">
+            <div :class="toggle == false ? 'bg-lime-700' : 'bg-Darkblue'"
+            class="w-14 h-14 rounded-full flex items-center justify-center" title="Live chat">
+                <i :class="toggle == false ? 'text-white' : 'text-white'"
+                class="fa-solid fa-comment cursor-pointer text-3xl"></i>
+            </div>
+        </a>
+    </div>
     <footer>
         <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
             <div class="flex flex-col items-center pb-10 lg:hidden">
@@ -172,8 +204,6 @@ x-data="{toggle: false, label: false, navbar: false}">
                     </ul>
                 </div>
                 <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
-                    <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
-                    <h4 class="text-xl">Media Services Group</h4> -->
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                     <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"

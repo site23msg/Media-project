@@ -6,7 +6,6 @@ x-data="{toggle: false, navbar: false}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="custom.css">
     <title>23MSG | Media Sevices Group</title>
     <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
 </head>
@@ -29,7 +28,7 @@ x-data="{toggle: false, navbar: false}">
              <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
              class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
         </div>
-        <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
+        <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                 href="index.html">About 23MSG</a>
@@ -47,7 +46,7 @@ x-data="{toggle: false, navbar: false}">
                 href="blog.html">Blog</a>
             </li>
             <li>
-                <label for="default-toggle" class="relative cursor-pointer">
+                <label for="default-toggle" class="relative cursor-pointer" title="Switch display mode">
                     <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
                     <div :class=" toggle == false ? 'after:bg-white' : 'after:bg-Lightblue'"
                     class="w-[53px] h-[30px] border-2 border-white bg-transparent peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[6px] after:left-[6px] after:border after:rounded-full after:h-[18px] after:w-[18px] after:transition-all peer-checked:border-Lightblue" x-on:click="toggle = !toggle">
@@ -55,12 +54,15 @@ x-data="{toggle: false, navbar: false}">
                 </label>
             </li>
         </ul>
-        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
+        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+                class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
         </div>
-        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 lg:hidden transfrom transition-all duration-600' : 'absolute text-3xl top-0 left-0 transfrom transition-all duration-600'"
+        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute text-3xl -translate-x-[40px] top-0 transfrom transition-all duration-700'"
         class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
             <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
             <li>
@@ -91,13 +93,13 @@ x-data="{toggle: false, navbar: false}">
                 class="border border-solid border-white py-2 px-6 text-xl rounded-full">Next projects</button>
             </div>
         </div>
-        <p class="text-center px-7 lg:px-80">
+        <p class="text-center px-7 lg:px-40 xl:text-lg xl:px-80">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facere cupiditate repudiandae, quis id, consectetur quibusdam reiciendis vero nulla suscipit beatae similique deleniti eum quas nesciunt autem. Fugiat, architecto doloremque.
         </p>
     </section>
-    <main class="px-7 my-20 lg:px-40">
+    <main class="px-7 my-20 lg:px-20 xl:px-40">
         <div class="flex flex-col items-center justify-center lg:gap-14 lg:grid lg:grid-cols-2 px-40">
             <div class="lg:col-span-2 lg:justify-self-center">
                 <img class="hidden lg:block rounded-3xl object-cover w-full lg:max-w-[1200px] lg:h-[800px]" src="https://picsum.photos/1200/800" alt="project_photo">

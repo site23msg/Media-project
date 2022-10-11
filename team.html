@@ -6,7 +6,6 @@ x-data="{toggle: false, img:false,navbar: false}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
-    <link rel="stylesheet" href="custom.css">
     <title>23MSG | Media Sevices Group</title>
     <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
 </head>
@@ -22,14 +21,14 @@ x-data="{toggle: false, img:false,navbar: false}">
             <span class="text-xl">Media Services Group</span> -->
             <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
              class="" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-            <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
+            <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs hidden'"
             class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
             <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
              class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
              <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
              class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
         </div>
-        <ul class="hidden lg:flex lg:items-center lg:gap-20 text-lg">
+        <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                 href="index.html">About 23MSG</a>
@@ -47,7 +46,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                 href="blog.html">Blog</a>
             </li>
             <li>
-                <label for="default-toggle" class="relative cursor-pointer">
+                <label for="default-toggle" class="relative cursor-pointer" title="Switch display mode">
                     <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
                     <div :class=" toggle == false ? 'after:bg-white' : 'after:bg-Lightblue'"
                     class="w-[53px] h-[30px] border-2 border-white bg-transparent peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[6px] after:left-[6px] after:border after:rounded-full after:h-[18px] after:w-[18px] after:transition-all peer-checked:border-Lightblue" x-on:click="toggle = !toggle">
@@ -55,12 +54,15 @@ x-data="{toggle: false, img:false,navbar: false}">
                 </label>
             </li>
         </ul>
-        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
-            <hr class="border-2 border-solid border-white mt-2">
+        <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+                class="border-2 border-solid mt-2">
+            <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
+            class="border-2 border-solid mt-2">
         </div>
-        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 lg:hidden transfrom transition-all duration-600' : 'absolute text-3xl top-0 left-0 transfrom transition-all duration-600'"
+        <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute text-3xl -translate-x-[40px] top-0 transfrom transition-all duration-700'"
         class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
             <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
             <li>
@@ -78,16 +80,16 @@ x-data="{toggle: false, img:false,navbar: false}">
         </ul>
     </nav>
 </section>
-        <section class="px-7 lg:px-40">
+        <section class="px-7 lg:px-20 xl:px-40">
             <div class="my-20 flex items-center justify-center">
-                <div class="flex flex-col items-center justify-center text-5xl lg:text-8xl font-Hurmebold">
+                <div class="flex flex-col items-center justify-center text-5xl xl:text-8xl font-Hurmebold">
                     <h1>Team work</h1>
                     <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
-                    <p class="text-center text-lg max-w-7xl lg:px-20 py-20">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
+                    <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
                 </div>
             </div>
             <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5" @mouseover.away="img = '0'">
-                <div class="lg:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '1'">
                         <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/eniko.png" alt="project_photo">
@@ -100,7 +102,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                        </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '2'">
                         <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/barna.png" alt="project_photo">
@@ -113,7 +115,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                     </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '3'">
                         <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/lili.png" alt="project_photo">
@@ -126,7 +128,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                     </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '4'">
                         <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/zoli.png" alt="project_photo">
@@ -139,7 +141,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                     </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '5'">
                         <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/evelin.png" alt="project_photo">
@@ -152,7 +154,7 @@ x-data="{toggle: false, img:false,navbar: false}">
                     </div>
                     </div>
                 </div>
-                <div class="lg:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '6'">
                         <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
                          class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/norbi.png" alt="project_photo">
