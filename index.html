@@ -20,16 +20,24 @@ x-data="{toggle: false, navbar: false}">
             <div class="flex items-center gap-2">
                 <!-- <h4 class="font-Hurmebold text-2xl">23 |</h4>
                 <span class="text-xl">Media Services Group</span> -->
-                <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
-                 class="" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-                <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs hidden'"
-                class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-                <img :class="toggle == true ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
-                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
-                 <img :class="toggle == false ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
-                 class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                <a href="index.html">
+                    <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-[250px] xl:max-w-xs'"
+                    class="cursor-pointer" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
+                </a>
+                <a href="index.html">
+                    <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-[250px] xl:max-w-xs hidden'"
+                    class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+                </a>
+                <a href="index.html">
+                    <img :class="toggle == true ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
+                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                </a>
+                <a href="index.html">
+                    <img :class="toggle == false ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
+                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                </a>
             </div>
-            <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
+            <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                 <li>
                     <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                     href="team.html">About 23MSG</a>
@@ -106,7 +114,7 @@ x-data="{toggle: false, navbar: false}">
                     <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
                         <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/Design.png" alt="desgin">
                         <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Graphic and web</h2>
-                        <p class="text-center text-sm px-10 mg:p-0 max-w-[344px] font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
+                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
                     </div>
                     <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
                      class="hidden lg:block rounded-full h-[249px] w-1">
@@ -115,7 +123,7 @@ x-data="{toggle: false, navbar: false}">
                     <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
                         <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/photo.png" alt="photograph">
                         <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Photo and video</h2>
-                        <p class="text-center text-sm px-10 mg:p-0 max-w-[344px] font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
+                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
                     </div>
                     <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
                     class="hidden lg:block rounded-full h-[249px] w-1">
@@ -124,7 +132,7 @@ x-data="{toggle: false, navbar: false}">
                     <div class="flex flex-col items-center justify-center basis-1/3">
                         <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/ad.png" alt="advertisement">
                         <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Advertisement</h2>
-                        <p class="text-center text-sm px-10 mg:p-0 max-w-[344px] font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
+                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +165,7 @@ x-data="{toggle: false, navbar: false}">
                 <div class="xl:basis-1/4 justify-center items-center flex flex-col">
                     <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
                     <div class="pl-4">
-                        <a href="projectUp.html">
+                        <a id="agro" href="projectUp.html">
                             <h2 class="font-Hurmebold text-2xl pt-10">Agrohof Branding</h2>
                         </a>
                         <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
@@ -215,13 +223,17 @@ x-data="{toggle: false, navbar: false}">
                         </li>
                     </ul>
                 </div>
-                <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
+                <li class="lg:flex gap-5 lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
                     <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
                     <h4 class="text-xl">Media Services Group</h4> -->
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                     <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                    <div class="flex flex-col justify-center items-center text-xs">
+                        <p>@ Copyright 2022 | 23MSG Media Services Group</p>
+                        <span>All rights reserved.</span>
+                    </div>
                 </li>
                 <div class="basis-1/2 lg:basis-96">
                     <ul class="flex justify-around items-center">
@@ -236,6 +248,7 @@ x-data="{toggle: false, navbar: false}">
             </ul>
         </nav>
     </footer>
+    <script src="/src/custom.js"></script>
     <script src="/dist/app.js"></script>
 </body>
 </html>

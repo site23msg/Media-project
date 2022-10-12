@@ -17,19 +17,27 @@ x-data="{toggle: false, label: false, navbar: false}">
 :class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
 <section class="relative">
     <nav class="flex justify-between p-10">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1">
             <!-- <h4 class="font-Hurmebold text-2xl">23 |</h4>
             <span class="text-xl">Media Services Group</span> -->
-            <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-xs'"
-             class="" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-            <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-xs'"
-            class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-            <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
-             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
-             <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
-             class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+            <a href="index.html">
+                <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-[250px] xl:max-w-xs'"
+                class="cursor-pointer" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
+            </a>
+            <a href="index.html">
+                <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-[250px] xl:max-w-xs hidden'"
+                class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+            </a>
+            <a href="index.html">
+                <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'"
+                class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+            </a>
+             <a href="index.html">
+                <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'"
+                class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+            </a>
         </div>
-        <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
+        <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
                 href="team.html">About 23MSG</a>
@@ -48,7 +56,7 @@ x-data="{toggle: false, label: false, navbar: false}">
             </li>
             <li>
                 <div :class="toggle == false ? 'bg-Lightblue text-white rounded-full h-10 w-10' :'bg-Lightblue text-white font-bold rounded-full h-10 w-10'"
-                class="justify-center items-center cursor-pointer hidden lg:flex">
+                class="justify-center items-center cursor-pointer hidden xl:flex">
                 <a class="" href="https://wa.me/0036709403244">
                     <i class="fa-solid fa-phone"></i>
                 </a>
@@ -205,11 +213,15 @@ x-data="{toggle: false, label: false, navbar: false}">
                         </li>
                     </ul>
                 </div>
-                <li class="lg:flex lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
+                <li class="lg:flex lg:flex-col gap-5 lg:items-center lg:w-72 hidden lg:basis-96">
                     <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                     <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"
                     class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                    <div class="flex flex-col justify-center items-center text-center text-xs">
+                        <p>@ Copyright 2022 | 23MSG Media Services Group</p>
+                        <span>All rights reserved.</span>
+                    </div>
                 </li>
                 <div class="basis-1/2 lg:basis-96">
                     <ul class="flex justify-around items-center">
