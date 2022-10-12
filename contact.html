@@ -47,9 +47,11 @@ x-data="{toggle: false, label: false, navbar: false}">
                 href="blog.html">Blog</a>
             </li>
             <li>
-                <div :class="toggle == false ? 'bg-Lightblue text-white text-lg rounded-full p-2' :'bg-Lightblue text-white font-bold text-lg rounded-full p-2'"
-                class="flex justify-center items-center cursor-pointer lg:hidden xl:block">
-                    <i class="fa-solid fa-phone"></i><a href="https://wa.me/0036709403244">+36 70 94 03 244</a>
+                <div :class="toggle == false ? 'bg-Lightblue text-white rounded-full h-10 w-10' :'bg-Lightblue text-white font-bold rounded-full h-10 w-10'"
+                class="justify-center items-center cursor-pointer hidden lg:flex">
+                <a class="" href="https://wa.me/0036709403244">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
                 </div>
             </li>
             <li>
