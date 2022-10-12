@@ -3,11 +3,13 @@
 @font-face {
     src: url("../fonts/Hurmebold.ttf");
     font-family:"Hurmebold";
+    font-display: swap;
 }
 
 @font-face {
     src: url("../fonts/Hurmelight.ttf");
     font-family:"Hurmethin";
     font-weight: 300;
+    font-display: swap;
 }
 @tailwind utilities;

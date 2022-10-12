@@ -31,7 +31,7 @@ x-data="{toggle: false, img:false,navbar: false}">
         <ul class="hidden lg:flex lg:items-center xl:gap-20 text-lg font-Hurmethin">
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                href="index.html">About 23MSG</a>
+                href="team.html">About 23MSG</a>
             </li>
             <li>
                 <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
@@ -66,7 +66,7 @@ x-data="{toggle: false, img:false,navbar: false}">
         class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
             <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
             <li>
-                <a href="index.html">About</a>
+                <a href="team.html">About</a>
             </li>
             <li>
                 <a href="portfolio.html">Portfolio</a>
@@ -131,13 +131,13 @@ x-data="{toggle: false, img:false,navbar: false}">
                 <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                     <div class="relative" @mouseover="img = '4'">
                         <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/zoli.png" alt="project_photo">
+                         class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/arnold.png" alt="project_photo">
                         <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
                         <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
                         <a href="">
-                            <h4 class="font-Hurmebold text-3xl pt-10">Papp Zoltán</h4>
+                            <h4 class="font-Hurmebold text-3xl pt-10">Galaczi Arnold</h4>
                         </a>
-                        <p class="text-md lg:text-md">Backend developer</p>
+                        <p class="text-md lg:text-md">Frontend developer</p>
                     </div>
                     </div>
                 </div>
