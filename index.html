@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en"
-x-data="{toggle: false, navbar: false}">
+x-data="{'darkMode': false}"
+x-init="
+    darkMode = JSON.parse(localStorage.getItem('darkMode'));
+    $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,242 +16,233 @@ x-data="{toggle: false, navbar: false}">
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="tracking-widest font-Hurmethin lg:overflow-x-hidden"
-:class="toggle == false ? 'bg-Darkblue text-white' : 'bg-white text-Darkblue'">
-    <section class="relative">
-        <nav class="flex justify-between p-10">
-            <div class="flex items-center gap-2">
-                <!-- <h4 class="font-Hurmebold text-2xl">23 |</h4>
-                <span class="text-xl">Media Services Group</span> -->
-                <a href="index.html">
-                    <img :class="toggle == true ? 'hidden' : 'hidden lg:block lg:max-w-[250px] xl:max-w-xs'"
-                    class="cursor-pointer" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
+<body class="font-Hurmethin">
+    <div :class="{'dark': darkMode === true}">
+        <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
+            <nav class="flex justify-between p-10" x-data="{navbar: false}">
+                <a class="hidden lg:dark:block" href="index.html">
+                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
+                </a>
+                <a class="hidden lg:block"
+                 href="index.html">
+                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
                 </a>
                 <a href="index.html">
-                    <img :class="toggle == false ? 'hidden' : 'lg:block lg:max-w-[250px] xl:max-w-xs hidden'"
-                    class="" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-                </a>
-                <a href="index.html">
-                    <img :class="toggle == true ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
+                    <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'" width="97px"
                     class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                 </a>
                 <a href="index.html">
-                    <img :class="toggle == false ? 'hidden' : 'lg:max-w-[97px]'" width="97px"
+                    <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'" width="97px"
                     class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
-            </div>
-            <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="team.html">About 23MSG</a>
-                </li>
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="portfolio.html">Portfolio</a>
-                </li>   
-                <li class="">
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
-                    href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
-                    href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <label for="default-toggle" class="relative cursor-pointer" title="Switch display mode">
-                        <input type="checkbox" value="" id="default-toggle" class="sr-only peer" aria-labelledby="default-toggle">
-                        <div :class=" toggle == false ? 'after:bg-white' : 'after:bg-Lightblue'"
-                        class="w-[53px] h-[30px] border-2 border-white bg-transparent peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-[22px] after:content-[''] after:absolute after:top-[6px] after:left-[6px] after:border after:rounded-full after:h-[18px] after:w-[18px] after:transition-all peer-checked:border-Lightblue" x-on:click="toggle = !toggle">
+                <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
+                    <li>
+                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        href="team.html">About 23MSG</a>
+                    </li>
+                    <li>
+                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        href="portfolio.html">Portfolio</a>
+                    </li>   
+                    <li class="">
+                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
+                        href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <div class="flex justify-end items-center space-x-2">
+                            <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
+                            <div class="toggle-dot bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
+                            </label>
+                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @change="darkMode = !darkMode" />
                         </div>
-                    </label>
-                </li>
-            </ul>
-            <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
-                <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
-                class="border-2 border-solid mt-2">
-                <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
-                 class="border-2 border-solid mt-2">
-                <hr :class="toggle == false ? 'border-white' : 'border-Darkblue'"
-                class="border-2 border-solid mt-2">
-            </div>
-            <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute -translate-x-[40px] top-0 transfrom transition-all duration-700'"
-        class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
-                <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
-                <li>
-                    <a href="team.html">About</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>   
-                <li class="">
-                    <a  href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-    <main class="px-7 lg:px-20 xl:px-40">
-        <section class="lg:mt-20">
-            <div class="flex flex-wrap lg:flex-row lg:flex-nowrap justify-center lg:justify-between items-center">
-                <div class="lg:hidden">
-                    <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="">
+                    </li>
+                </ul>
+                <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
+                    <hr class="border-2 border-Darkblue dark:border-white border-solid  mt-2">
+                    <hr class="border-2 border-Darkblue  dark:border-white border-solid mt-2">
+                    <hr class="border-2 border-Darkblue dark:border-white border-solid mt-2">
                 </div>
-                <div class="max-w-xl flex flex-col items-center lg:items-start gap-14">
-                    <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold">Welcome at 23MSG!</h1>
+                <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute -translate-x-[40px] top-0 transfrom transition-all duration-700'"
+                class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
+                    <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
+                    <li>
+                        <a href="team.html">About</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>   
+                    <li class="">
+                        <a  href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="px-7 lg:px-20 xl:px-40">
+                <section class="lg:mt-20">
+                    <div class="flex flex-wrap lg:flex-row lg:flex-nowrap justify-center lg:justify-between items-center">
+                        <div class="lg:hidden">
+                            <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="">
+                        </div>
+                        <div class="max-w-xl flex flex-col items-center lg:items-start gap-14">
+                            <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold">Welcome at 23MSG!</h1>
+                            <div>
+                                <a :class="toggle == true ? 'bg-Lightblue text-white' : ''"
+                                class="border border-blue-600 py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin" href="team.html">About us</a>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block">
+                            <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="welcomepage-img">
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-10 mb-20">
                     <div>
-                        <a :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                        class="border border-blue-600 py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin" href="team.html">About us</a>
+                        <h1 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center lg:mb-32 pb-24">What we do?</h1>
+                        <div class="flex flex-col lg:flex-row  items-center justify-between lg:gap-x-5 gap-y-10">
+                            <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
+                                <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/Design.png" alt="desgin">
+                                <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Graphic and web</h2>
+                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
+                            </div>
+                            <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
+                            class="hidden lg:block rounded-full h-[249px] w-1">
+                                <span class="invisible">1</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
+                                <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/photo.png" alt="photograph">
+                                <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Photo and video</h2>
+                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
+                            </div>
+                            <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
+                            class="hidden lg:block rounded-full h-[249px] w-1">
+                            <span class="invisible">1</span>
+                        </div>
+                            <div class="flex flex-col items-center justify-center basis-1/3">
+                                <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/ad.png" alt="advertisement">
+                                <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Advertisement</h2>
+                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="hidden lg:block">
-                    <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="welcomepage-img">
-                </div>
-            </div>
-        </section>
-        <section class="mt-10 mb-20">
-            <div>
-                <h1 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center lg:mb-32 pb-24">What we do?</h1>
-                <div class="flex flex-col lg:flex-row  items-center justify-between lg:gap-x-5 gap-y-10">
-                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
-                        <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/Design.png" alt="desgin">
-                        <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Graphic and web</h2>
-                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
+                </section>
+                <section class="">
+                    <div class="my-20 flex items-center justify-center">
+                        <div class="basis-1/4 flex items-center justify-center">
+                            <h1  class="text-3xl lg:text-6xl font-Hurmebold lg:my-32">Projects</h1>
+                        </div>
                     </div>
-                    <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
-                     class="hidden lg:block rounded-full h-[249px] w-1">
-                        <span class="invisible">1</span>
+                    <div class="flex flex-wrap items-center justify-center gap-y-10 lg:gap-10 xl:justify-between xl:gap-20">
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
+                            <div class="pl-4">
+                                <a href="projectUp.html">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">BouHouf Branding</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
+                            </div>
+                        </div>
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
+                            <div class="pl-4">
+                                <a href="projectUp.html">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">R2P Branding</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
+                            </div>
+                        </div>
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
+                            <div class="pl-4">
+                                <a id="agro" href="projectUp.html">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">Agrohof Branding</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
+                            </div>
+                        </div>
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
+                            <div class="pl-4">
+                                <a href="projectUp.html">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">Black Grizzly Promo video</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
+                            </div>
+                        </div>
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/interview.png" alt="project-photo-about-interview-making">
+                            <div class="projectUp.html">
+                                <a href="">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">Interview Romania</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Photo, Video</p>
+                            </div>
+                        </div>
+                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
+                            <div class="pl-4">
+                                <a href="projectUp.html">
+                                    <h2 class="font-Hurmebold text-2xl pt-10">Brand Subpages</h2>
+                                </a>
+                                <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
-                        <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/photo.png" alt="photograph">
-                        <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Photo and video</h2>
-                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
+                    <div class="flex items-center justify-center my-16 lg:my-20">
+                        <label for="projects"></label>
+                        <button :class="toggle == true ? 'bg-Lightblue text-white' : ''"
+                        class="border border-solid border-blue-600 py-2 px-6 text-xl rounded-full" aria-labelledby="projects">More projects</button>
                     </div>
-                    <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
-                    class="hidden lg:block rounded-full h-[249px] w-1">
-                       <span class="invisible">1</span>
-                   </div>
-                    <div class="flex flex-col items-center justify-center basis-1/3">
-                        <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/ad.png" alt="advertisement">
-                        <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Advertisement</h2>
-                        <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
+                </section>
+            </main>
+            <footer>
+                <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+                    <div class="flex flex-col items-center pb-10 lg:hidden">
+                        <img class="block max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                        <img class="block dark:hidden max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-light-logo-mobile">
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="">
-            <div class="my-20 flex items-center justify-center">
-                <div class="basis-1/4 flex items-center justify-center">
-                    <h1  class="text-3xl lg:text-6xl font-Hurmebold lg:my-32">Projects</h1>
-                </div>
-            </div>
-            <div class="flex flex-wrap items-center justify-center gap-y-10 lg:gap-10 xl:justify-between xl:gap-20">
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
-                    <div class="pl-4">
-                        <a href="projectUp.html">
-                            <h2 class="font-Hurmebold text-2xl pt-10">BouHouf Branding</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
-                    </div>
-                </div>
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
-                    <div class="pl-4">
-                        <a href="projectUp.html">
-                            <h2 class="font-Hurmebold text-2xl pt-10">R2P Branding</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
-                    </div>
-                </div>
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
-                    <div class="pl-4">
-                        <a id="agro" href="projectUp.html">
-                            <h2 class="font-Hurmebold text-2xl pt-10">Agrohof Branding</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
-                    </div>
-                </div>
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
-                    <div class="pl-4">
-                        <a href="projectUp.html">
-                            <h2 class="font-Hurmebold text-2xl pt-10">Black Grizzly Promo video</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
-                    </div>
-                </div>
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/interview.png" alt="project-photo-about-interview-making">
-                    <div class="projectUp.html">
-                        <a href="">
-                            <h2 class="font-Hurmebold text-2xl pt-10">Interview Romania</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Photo, Video</p>
-                    </div>
-                </div>
-                <div class="xl:basis-1/4 justify-center items-center flex flex-col">
-                    <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
-                    <div class="pl-4">
-                        <a href="projectUp.html">
-                            <h2 class="font-Hurmebold text-2xl pt-10">Brand Subpages</h2>
-                        </a>
-                        <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center my-16 lg:my-20">
-                <label for="projects"></label>
-                <button :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                class="border border-solid border-blue-600 py-2 px-6 text-xl rounded-full" aria-labelledby="projects">More projects</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
-            <div class="flex flex-col items-center pb-10 lg:hidden">
-                <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
-                class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
-            </div>
-            <ul class="flex justify-between items-center lg:gap-10 w-full">
-                <div class="basis-1/2 lg:basis-96">
-                    <ul class="flex justify-around items-center gap-4">
-                        <li class="text-sm lg:text-lg">
-                            <a href="index.html">About 23MSG</a>
+                    <ul class="flex justify-between items-center lg:gap-10 w-full">
+                        <div class="basis-1/2 lg:basis-96">
+                            <ul class="flex justify-around items-center gap-4">
+                                <li class="text-sm lg:text-lg">
+                                    <a href="index.html">About 23MSG</a>
+                                </li>
+                                <li class="text-sm lg:text-lg">
+                                    <a href="portfolio.html">Portfolio</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li class="lg:flex gap-5 lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
+                            <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
+                            <h4 class="text-xl">Media Services Group</h4> -->
+                            <img class="max-w-[144px] dark:block" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                            <img class="max-w-[144px] dark:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                            <div class="flex flex-col justify-center items-center text-center text-xs">
+                                <p>@ Copyright 2022 | 23MSG Media Services Group</p>
+                                <span>All rights reserved.</span>
+                            </div>
                         </li>
-                        <li class="text-sm lg:text-lg">
-                            <a href="portfolio.html">Portfolio</a>
-                        </li>
+                        <div class="basis-1/2 lg:basis-96">
+                            <ul class="flex justify-around items-center">
+                                <li class="text-sm lg:text-lg">
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li class="text-sm lg:text-lg">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
-                </div>
-                <li class="lg:flex gap-5 lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
-                    <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
-                    <h4 class="text-xl">Media Services Group</h4> -->
-                    <img :class="toggle == false ? 'max-w-[144px] block' : 'hidden'"
-                    class="max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
-                    <img :class="toggle == true ? 'max-w-[144px] block' : 'hidden'"
-                    class="max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
-                    <div class="flex flex-col justify-center items-center text-xs">
-                        <p>@ Copyright 2022 | 23MSG Media Services Group</p>
-                        <span>All rights reserved.</span>
-                    </div>
-                </li>
-                <div class="basis-1/2 lg:basis-96">
-                    <ul class="flex justify-around items-center">
-                        <li class="text-sm lg:text-lg">
-                            <a href="blog.html">Blog</a>
-                        </li>
-                        <li class="text-sm lg:text-lg">
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </ul>
-        </nav>
-    </footer>
-    <script src="/src/custom.js"></script>
-    <script src="/dist/app.js"></script>
+                </nav>
+            </footer>
+        </div>
+        <script src="/src/custom.js"></script>
+        <script src="/dist/app.js"></script>
+    </div>
 </body>
 </html>
