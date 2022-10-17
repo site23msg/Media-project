@@ -16,7 +16,7 @@ x-init="
     [x-cloak] { display: none !important; }
 </style>
 <body class="font-Hurmethin">
-    <div :class="{'dark': darkMode === true}">
+    <div :class="{'dark': darkMode === false}">
         <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
             <nav class="flex justify-between p-10" x-data="{navbar: false}">
                 <a class="hidden lg:dark:block" href="index.html">
@@ -26,29 +26,28 @@ x-init="
                  href="index.html">
                     <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
                 </a>
-                <a href="index.html">
-                    <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'" width="97px"
-                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                <a class="hidden dark:block"
+                href="index.html">
+                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                 </a>
                 <a href="index.html">
-                    <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'" width="97px"
-                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="team.html">About 23MSG</a>
                     </li>
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="portfolio.html">Portfolio</a>
                     </li>   
                     <li class="">
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="contact.html">Contact</a>
                     </li>
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="blog.html">Blog</a>
                     </li>
                     <li>

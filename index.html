@@ -17,7 +17,7 @@ x-init="
     [x-cloak] { display: none !important; }
 </style>
 <body class="font-Hurmethin">
-    <div :class="{'dark': darkMode === true}">
+    <div :class="{'dark': darkMode === false}">
         <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
             <nav class="flex justify-between p-10" x-data="{navbar: false}">
                 <a class="hidden lg:dark:block" href="index.html">
@@ -27,35 +27,34 @@ x-init="
                  href="index.html">
                     <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
                 </a>
-                <a href="index.html">
-                    <img :class="toggle == true ? 'hidden' : 'max-w-[97px]'" width="97px"
-                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                <a class="hidden dark:block"
+                href="index.html">
+                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                 </a>
                 <a href="index.html">
-                    <img :class="toggle == false ? 'hidden' : 'max-w-[97px]'" width="97px"
-                    class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="team.html">About 23MSG</a>
                     </li>
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="portfolio.html">Portfolio</a>
                     </li>   
                     <li class="">
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'" 
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="contact.html">Contact</a>
                     </li>
                     <li>
-                        <a :class="toggle == false ? 'active:border active:border-Lightblue py-2 px-6 rounded-full' : 'active:bg-Lightblue active:text-white py-2 px-6 rounded-full'"
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
                         href="blog.html">Blog</a>
                     </li>
                     <li>
-                        <div class="flex justify-end items-center space-x-2">
+                        <div class="flex justify-end items-center">
                             <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
-                            <div class="toggle-dot bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
+                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
                             </label>
                             <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @change="darkMode = !darkMode" />
                         </div>
@@ -92,8 +91,7 @@ x-init="
                         <div class="max-w-xl flex flex-col items-center lg:items-start gap-14">
                             <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold">Welcome at 23MSG!</h1>
                             <div>
-                                <a :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                                class="border border-blue-600 py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin" href="team.html">About us</a>
+                                <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin" href="team.html">About us</a>
                             </div>
                         </div>
                         <div class="hidden lg:block">
@@ -110,8 +108,7 @@ x-init="
                                 <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Graphic and web</h2>
                                 <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
                             </div>
-                            <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
-                            class="hidden lg:block rounded-full h-[249px] w-1">
+                            <div class="hidden lg:block bg-divideGray bg-opacity-[0.11] dark:bg-opacity-100 rounded-full h-[249px] w-1">
                                 <span class="invisible">1</span>
                             </div>
                             <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
@@ -119,8 +116,7 @@ x-init="
                                 <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Photo and video</h2>
                                 <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
                             </div>
-                            <div :class="toggle == true ? 'bg-divideGray bg-opacity-[0.11]' : 'bg-divideGray'"
-                            class="hidden lg:block rounded-full h-[249px] w-1">
+                            <div class="hidden lg:block bg-divideGray bg-opacity-[0.11] dark:bg-opacity-100 rounded-full h-[249px] w-1">
                             <span class="invisible">1</span>
                         </div>
                             <div class="flex flex-col items-center justify-center basis-1/3">
@@ -137,8 +133,8 @@ x-init="
                             <h1  class="text-3xl lg:text-6xl font-Hurmebold lg:my-32">Projects</h1>
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center gap-y-10 lg:gap-10 xl:justify-between xl:gap-20">
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                    <div class="flex flex-wrap items-center justify-center gap-y-20 lg:gap-10 xl:justify-between xl:gap-20">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
                             <div class="pl-4">
                                 <a href="projectUp.html">
@@ -147,7 +143,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
                             <div class="pl-4">
                                 <a href="projectUp.html">
@@ -156,7 +152,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
                             <div class="pl-4">
                                 <a id="agro" href="projectUp.html">
@@ -165,7 +161,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
                             <div class="pl-4">
                                 <a href="projectUp.html">
@@ -174,7 +170,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/interview.png" alt="project-photo-about-interview-making">
                             <div class="projectUp.html">
                                 <a href="">
@@ -183,7 +179,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Photo, Video</p>
                             </div>
                         </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col">
+                        <div class="justify-center items-center flex flex-col">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
                             <div class="pl-4">
                                 <a href="projectUp.html">
@@ -195,8 +191,7 @@ x-init="
                     </div>
                     <div class="flex items-center justify-center my-16 lg:my-20">
                         <label for="projects"></label>
-                        <button :class="toggle == true ? 'bg-Lightblue text-white' : ''"
-                        class="border border-solid border-blue-600 py-2 px-6 text-xl rounded-full" aria-labelledby="projects">More projects</button>
+                        <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" aria-labelledby="projects">More projects</button>
                     </div>
                 </section>
             </main>
@@ -210,10 +205,10 @@ x-init="
                         <div class="basis-1/2 lg:basis-96">
                             <ul class="flex justify-around items-center gap-4">
                                 <li class="text-sm lg:text-lg">
-                                    <a href="index.html">About 23MSG</a>
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500" href="index.html">About 23MSG</a>
                                 </li>
                                 <li class="text-sm lg:text-lg">
-                                    <a href="portfolio.html">Portfolio</a>
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="portfolio.html">Portfolio</a>
                                 </li>
                             </ul>
                         </div>
@@ -230,10 +225,10 @@ x-init="
                         <div class="basis-1/2 lg:basis-96">
                             <ul class="flex justify-around items-center">
                                 <li class="text-sm lg:text-lg">
-                                    <a href="blog.html">Blog</a>
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="blog.html">Blog</a>
                                 </li>
                                 <li class="text-sm lg:text-lg">
-                                    <a href="contact.html">Contact</a>
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="contact.html">Contact</a>
                                 </li>
                             </ul>
                         </div>
