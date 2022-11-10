@@ -373,12 +373,12 @@ x-init="
                     </div>
                 </section>
                 <section >
-                    <div class="my-20 flex items-center justify-center">
+                    <div class="lg:my-20 flex items-center justify-center">
                         <div class="basis-1/4 flex items-center justify-center">
                             <h1  class="text-3xl lg:text-6xl font-Hurmebold">Projects</h1>
                         </div>
                     </div>
-                    <div class="py-20" x-data="{switcher: 'all'}">
+                    <div class="py-20 hidden lg:block" x-data="{switcher: 'all'}">
                         <div class="grid grid-cols-5 gap-5">
                             <div data-toggle="1" class="toggle 1 font-bold xl:text-xl cursor-pointer">All</div>
                             <div data-toggle="2" class="toggle 2 font-bold xl:text-xl cursor-pointer">Webdesign</div>
@@ -391,8 +391,8 @@ x-init="
                         </div>
                     </div>
                     <div class="links flex flex-wrap items-center justify-center gap-y-20 lg:gap-10 xl:justify-between xl:gap-20">
-                        <div>
-                            <a data-name="bauhof"  href="projectUp.html">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <a data-name="bauhof"  href="">
                                 <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
                             </a>
                             <div class="pl-8">
@@ -402,7 +402,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="flex flex-col items-center lg:items-start">
                             <a data-name="r2p" href="">
                                 <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
                             </a>
@@ -413,8 +413,8 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div>
-                            <a data-name="agrohof" href="">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <a data-name="agrohof" href="projectUp.html">
                                 <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
                             </a>
                             <div class="pl-8">
@@ -424,8 +424,8 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div>
-                            <a data-name="grizzly" href="">
+                        <div class="flex flex-col items-center lg:items-start">
+                            <a data-name="grizzly" href="videos.html">
                                 <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
                             </a>
                             <div class="pl-8">
@@ -435,7 +435,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="flex flex-col items-center lg:items-start">
                          <a href="">
                             <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/interview.png" alt="project-photo-about-interview-making">
                          </a>
@@ -446,7 +446,7 @@ x-init="
                                 <p class="text-md lg:text-lg">Photo, Video</p>
                             </div>
                         </div>
-                        <div>
+                        <div class="flex flex-col items-center lg:items-start">
                             <a href="">
                                 <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]  " src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
                             </a>
