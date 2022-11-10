@@ -9,6 +9,14 @@ x-init="
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
+    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <title>23MSG | Media Sevices Group</title>
     <meta name="themecolor">
     <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
@@ -16,47 +24,64 @@ x-init="
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="font-Hurmethin">
+<body class="font-Hurmethin" x-cloak>
     <div :class="{'dark': darkMode === false}">
         <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
             <nav class="flex justify-between p-10" x-data="{navbar: false}">
-                <a class="hidden lg:dark:block" href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-                </a>
-                <a class="hidden lg:block"
-                 href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-                </a>
-                <a class="hidden dark:block"
+                <a class="hidden dark:md:block" 
                 href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
                 </a>
-                <a href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                <a class="hidden dark:md:hidden md:block"
+                 href="index.html">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+                </a>
+                <a class="hidden dark:block dark:md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                </a>
+                <a class="block dark:hidden md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="team.html">About 23MSG</a>
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="team.html">About 23MSG
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="portfolio.html">Portfolio</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="portfolio.html">Portfolio
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>   
                     <li class="">
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="contact.html">Contact</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="contact.html">Contact
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="blog.html">Blog</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="blog.html">Blog
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
+                    </li>
+                    <li>
+                        <div class="justify-center pt-2 cursor-pointer hidden xl:flex bg-Lightblue text-white rounded-full w-10 h-10">
+                        <a class="" href="https://wa.me/0036709403244">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        </div>
                     </li>
                     <li>
                         <div class="flex justify-end items-center">
                             <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
-                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
+                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform transition-all duration-300 ease-in-out dark:translate-x-6"></div>
                             </label>
-                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @change="darkMode = !darkMode" />
+                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @click="darkMode = !darkMode">
                         </div>
                     </li>
                 </ul>
@@ -82,106 +107,350 @@ x-init="
                     </li>
                 </ul>
             </nav>
-            <main class="px-7 lg:px-20 xl:px-40">
+            <main class="px-7 md:px-32 lg:px-20 xl:px-40">
                 <section class="lg:mt-20">
                     <div class="flex flex-wrap lg:flex-row lg:flex-nowrap justify-center lg:justify-between items-center">
                         <div class="lg:hidden">
                             <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="">
                         </div>
                         <div class="max-w-xl flex flex-col items-center lg:items-start gap-14">
-                            <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold">Welcome at 23MSG!</h1>
-                            <div>
+                            <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold" data-aos="fade-right" data-aos-duration="3000">Welcome at 23MSG!</h1>
+                            <div data-aos="fade-right" data-aos-duration="3000">
                                 <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin" href="team.html">About us</a>
                             </div>
                         </div>
-                        <div class="hidden lg:block">
+                        <div class="hidden lg:block" data-aos="zoom-in" data-aos-duration="3000">
                             <img class="rounded-md object-cover" src="/img/welcome_img.webp" alt="welcomepage-img">
                         </div>
                     </div>
                 </section>
                 <section class="mt-10 mb-20">
                     <div>
-                        <h1 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center lg:mb-32 pb-24">What we do?</h1>
-                        <div class="flex flex-col lg:flex-row  items-center justify-between lg:gap-x-5 gap-y-10">
-                            <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
+                        <h1 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center lg:mb-32 pb-24" data-aos="fade-right" data-aos-duration="3000">What we do?</h1>
+                        <div class="flex flex-col lg:flex-row  items-center justify-center lg:gap-x-5 gap-y-10 md:gap-y-0">
+                            <div class="flex flex-col items-center justify-center border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0 relative" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+                                <!-- <div class="absolute right-0 -bottom-2 cursor-pointer flex items-center text-xl font-bold justify-center w-10 h-10">
+                                    Next<a href="graphic.html">
+                                        <i class="fa-solid fa-angles-right text-5xl font-bold hover:transform hover:duration-300 hover:translate-x-2"></i>
+                                    </a>
+                                </div> -->
                                 <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/Design.png" alt="desgin">
                                 <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Graphic and web</h2>
-                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
+                                <p class="text-center text-sm lg:text-base xl:text-xl leading-8 px-10 font-Hurmethin">If you want to appear online today, the best way is to get a website. Our job is to make your dreams come true.</p>
                             </div>
                             <div class="hidden lg:block bg-divideGray bg-opacity-[0.11] dark:bg-opacity-100 rounded-full h-[249px] w-1">
                                 <span class="invisible">1</span>
                             </div>
-                            <div class="flex flex-col items-center justify-center basis-1/3 border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0">
+                            <div class="flex flex-col items-center justify-center border-b-4 border-divideGray lg:border-0 pb-10 lg:pb-0" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear">
+                                <!-- <div class="absolute right-0 -bottom-2 cursor-pointer flex items-center text-xl font-bold justify-center w-10 h-10">
+                                    Next<i class="fa-solid fa-angles-right text-5xl font-bold hover:transform hover:duration-300 hover:translate-x-2"></i>
+                                </div> -->
                                 <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/photo.png" alt="photograph">
                                 <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Photo and video</h2>
-                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
+                                <p class="text-center text-sm lg:text-base xl:text-xl leading-8 px-10 font-Hurmethin">With a professional team, we're making products, pictures, and videos, company review videos, everything you want.</p>
                             </div>
                             <div class="hidden lg:block bg-divideGray bg-opacity-[0.11] dark:bg-opacity-100 rounded-full h-[249px] w-1">
-                            <span class="invisible">1</span>
-                        </div>
-                            <div class="flex flex-col items-center justify-center basis-1/3">
+                                <span class="invisible">1</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="linear">
+                                <!-- <div class="absolute right-0 -bottom-2 cursor-pointer flex items-center text-xl font-bold justify-center w-10 h-10">
+                                    Next<i class="fa-solid fa-angles-right text-5xl font-bold hover:transform hover:duration-300 hover:translate-x-2"></i>
+                                </div> -->
                                 <img class="w-16 h-16 xl:w-20 xl:h-20" src="/img/ad.png" alt="advertisement">
                                 <h2 class="font-Hurmebold text-2xl lg:text-center xl:text-3xl my-12">Advertisement</h2>
-                                <p class="text-center text-sm lg:text-xl leading-8 px-10 font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
+                                <p class="text-center text-sm lg:text-base xl:text-xl leading-8 px-10 font-Hurmethin">The best way to grow your audience is appearing in ads. You don’t have to worry about that, we’ll manage your ads.</p>
+                            </div>
+                        </div>
+                        <div class="text-center py-20" data-aos="fade-up" data-aos-duration="3000">
+                            <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-2xl rounded-full font-Hurmethin" href="graphic.html">Check offers</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="xl:my-40">
+                    <h1 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center lg:mb-32 pb-24" data-aos="fade-right" data-aos-duration="3000">Reviews</h1>
+                    <div class="swiper mySwiper h-96 mx-auto">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritetur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?atis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum exercitationem possimus debitis molestiae maxime fuga beatae eveniet a architecto similique, repudiandae aliquam quasi quo, mollitia, nulla esse nisi iure. Commodi!
+                                        Non recusandae natus nisi ratione et minus maiores nihil enim impedit unde, aperiam reiciendis velit voluptatibus maxime delectus facilis nobis magni. Quia delectus quae nostrum natus quibusdam obcaecati, nisi nam!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people3.jpeg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people3.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people4.jpeg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people5.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people1.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="max-h-[200px] lg:max-h-[250px] max-w-[400px] bg-Darkgraytoggle dark:bg-Lightgray p-4 rounded-md flex flex-col gap-5">
+                                    <div class="flex items-center gap-5"> 
+                                        <div>
+                                            <img class="rounded-full h-10 w-10 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover" src="/img/people2.jpg" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="text-2xl font-bold">Peter Petegrew</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="overflow-y-auto scrollbar-thumb-blue-600 scrollbar-thumb-rounded-full scrollbar-track-gray-900 scrollbar-track-rounded-full scrollbar-thin">
+                                        <p class="text-xs md:text-base pr-5">etur labore dicta voluptatibus temporibus minima sed aspernatur porro esse, nostrum veritatis cum voluptate quas?</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="">
+                <section >
                     <div class="my-20 flex items-center justify-center">
                         <div class="basis-1/4 flex items-center justify-center">
-                            <h1  class="text-3xl lg:text-6xl font-Hurmebold lg:my-32">Projects</h1>
+                            <h1  class="text-3xl lg:text-6xl font-Hurmebold">Projects</h1>
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center gap-y-20 lg:gap-10 xl:justify-between xl:gap-20">
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
-                            <div class="pl-4">
+                    <div class="py-20" x-data="{switcher: 'all'}">
+                        <div class="grid grid-cols-5 gap-5">
+                            <div data-toggle="1" class="toggle 1 font-bold xl:text-xl cursor-pointer">All</div>
+                            <div data-toggle="2" class="toggle 2 font-bold xl:text-xl cursor-pointer">Webdesign</div>
+                            <div data-toggle="3" class="toggle 3 font-bold xl:text-xl cursor-pointer">Graphic design</div>
+                            <div data-toggle="4" class="toggle 4 font-bold xl:text-xl cursor-pointer">Videos</div>
+                            <div data-toggle="5" class="toggle 5 font-bold xl:text-xl cursor-pointer">Photos</div>
+                        </div>
+                        <div class="barMask bg-gray-500 rounded-md">
+                            <div class="barTrack w-32 h-2 bg-Lightgraytoggle rounded-md duration-500 ease-linear"></div>
+                        </div>
+                    </div>
+                    <div class="links flex flex-wrap items-center justify-center gap-y-20 lg:gap-10 xl:justify-between xl:gap-20">
+                        <div>
+                            <a data-name="bauhof"  href="projectUp.html">
+                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
+                            </a>
+                            <div class="pl-8">
                                 <a href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">BouHouf Branding</h2>
                                 </a>
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
-                            <div class="pl-4">
+                        <div>
+                            <a data-name="r2p" href="">
+                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
+                            </a>
+                            <div class="pl-8">
                                 <a href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">R2P Branding</h2>
                                 </a>
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
-                            <div class="pl-4">
+                        <div>
+                            <a data-name="agrohof" href="">
+                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/agrohof.png" alt="project-photo-about-agrohof-branding">
+                            </a>
+                            <div class="pl-8">
                                 <a id="agro" href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">Agrohof Branding</h2>
                                 </a>
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
-                            <div class="pl-4">
+                        <div>
+                            <a data-name="grizzly" href="">
+                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/grizly.png" alt="project-photo-about-video-and-photo-projects">
+                            </a>
+                            <div class="pl-8">
                                 <a href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">Black Grizzly Promo video</h2>
                                 </a>
                                 <p class="text-md lg:text-lg">Graphic Design, Social Campaing</p>
                             </div>
                         </div>
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/interview.png" alt="project-photo-about-interview-making">
-                            <div class="projectUp.html">
-                                <a href="">
+                        <div>
+                         <a href="">
+                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/interview.png" alt="project-photo-about-interview-making">
+                         </a>
+                            <div class="pl-8">
+                                <a href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">Interview Romania</h2>
                                 </a>
                                 <p class="text-md lg:text-lg">Photo, Video</p>
                             </div>
                         </div>
-                        <div class="justify-center items-center flex flex-col">
-                            <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
-                            <div class="pl-4">
+                        <div>
+                            <a href="">
+                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]  " src="/img/subpages.png" alt="project-photo-about-all-brands-subpages">
+                            </a>
+                            <div class="pl-8">
                                 <a href="projectUp.html">
                                     <h2 class="font-Hurmebold text-2xl pt-10">Brand Subpages</h2>
                                 </a>
@@ -195,8 +464,20 @@ x-init="
                     </div>
                 </section>
             </main>
+            <div class="fixed bottom-10 right-10 flex gap-4 z-50">
+                <a href="https://wa.me/0036709403244">
+                    <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
+                        <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="w-14 h-14 bg-Darkblue dark:bg-white rounded-full flex items-center justify-center" title="Live chat">
+                        <i class="fa-solid fa-comment cursor-pointer text-white dark:text-Darkblue text-3xl"></i>
+                    </div>
+                </a>
+            </div>
             <footer>
-                <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+                <nav class="pb-20 px-3 lg:px-40 lg:py-20 lg:mb-0">
                     <div class="flex flex-col items-center pb-10 lg:hidden">
                         <img class="block max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                         <img class="block dark:hidden max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-light-logo-mobile">
@@ -236,8 +517,10 @@ x-init="
                 </nav>
             </footer>
         </div>
-        <script src="/src/custom.js"></script>
-        <script src="/dist/app.js"></script>
     </div>
+    <script src="/dist/app.js"></script>
+    <script src="/swiper.js"></script>
+    <script src="/aos.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>

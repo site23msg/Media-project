@@ -2,6 +2,7 @@
 module.exports = {
   content: ["*.html"],
   darkMode: 'class',
+  mode: 'jit',
   theme: {
     extend: {
       colors: { 
@@ -19,5 +20,10 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
+  variants: {
+    scrollbar: ['rounded'],
+  },
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"
+x-data="{'darkMode': false}"
+x-init="
+    darkMode = JSON.parse(localStorage.getItem('darkMode'));
+    $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>23MSG | Media Sevices Group</title>
+    <meta name="themecolor">
+    <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
+</head>
+<style>
+    [x-cloak] { display: none !important; }
+</style>
+<body class="font-Hurmethin" x-cloak>
+    <div :class="{'dark': darkMode === false}">
+        <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
+            <nav class="flex justify-between p-10" x-data="{navbar: false}">
+                <a class="hidden dark:md:block" 
+                href="index.html">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
+                </a>
+                <a class="hidden dark:md:hidden md:block"
+                 href="index.html">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+                </a>
+                <a class="hidden dark:block dark:md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                </a>
+                <a class="block dark:hidden md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                </a>
+                <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
+                    <li>
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="team.html">About 23MSG
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
+                    </li>
+                    <li>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="portfolio.html">Portfolio
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
+                    </li>   
+                    <li class="">
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="contact.html">Contact
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
+                    </li>
+                    <li>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="blog.html">Blog
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
+                    </li>
+                    <li>
+                        <div class="justify-center pt-2 cursor-pointer hidden xl:flex bg-Lightblue text-white rounded-full w-10 h-10">
+                        <a class="" href="https://wa.me/0036709403244">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-end items-center">
+                            <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
+                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform transition-all duration-300 ease-in-out dark:translate-x-6"></div>
+                            </label>
+                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @click="darkMode = !darkMode">
+                        </div>
+                    </li>
+                </ul>
+                <div class="flex flex-col w-10 cursor-pointer relative lg:hidden" @click="navbar = !navbar" @click.away="navbar = false">
+                    <hr class="border-2 border-Darkblue dark:border-white border-solid  mt-2">
+                    <hr class="border-2 border-Darkblue  dark:border-white border-solid mt-2">
+                    <hr class="border-2 border-Darkblue dark:border-white border-solid mt-2">
+                </div>
+                <ul :class="navbar == false ? 'absolute -translate-x-72 top-0 transfrom transition-all duration-700' : 'absolute -translate-x-[40px] top-0 transfrom transition-all duration-700'"
+                class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
+                    <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
+                    <li>
+                        <a href="team.html">About</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">Portfolio</a>
+                    </li>   
+                    <li class="">
+                        <a  href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="px-7 md:px-32 lg:px-20 xl:px-40">
+                <h1 class="flex justify-center gap-6 items-center font-bold text-5xl lg:text-8xl mt-20 mb-28">GRAPHIC AND WEB</h1>
+                <div>
+                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center pb-10" data-aos="fade-right" data-aos-duration="3000">WEB DESIGN</h2>
+                    <div class="grid grid-cols-1 gap-20 md:grid-cols-2 items-center p-10 rounded-md">
+                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Landing page</h3>
+                            <img class="rounded-md" src="/img/website1.png" alt="pohoto_of_landing_page_23msg">
+                        </div>
+                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200"><span class="font-bold text-2xl">1.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400"><span class="font-bold text-2xl">2.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600"><span class="font-bold text-2xl">3.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800"><span class="font-bold text-2xl">4.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <div class="flex justify-between">
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Check portfolio</button>
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Call us</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-20 md:grid-cols-2 items-center p-10 rounded-md">
+                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200"><span class="font-bold text-2xl">1.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400"><span class="font-bold text-2xl">2.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600"><span class="font-bold text-2xl">3.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800"><span class="font-bold text-2xl">4.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <div class="flex justify-between">
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Check portfolio</button>
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Call us</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Branding for your company</h3>
+                            <img class="rounded-md" src="/img/website2.png" alt="pohoto_of_landing_page_23msg">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-20 md:grid-cols-2 items-center p-10 rounded-md">
+                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">SEO marketing</h3>
+                            <img class="rounded-md" src="/img/website2.png" alt="pohoto_of_landing_page_23msg">
+                        </div>
+                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
+                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200"><span class="font-bold text-2xl">1.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400"><span class="font-bold text-2xl">2.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600"><span class="font-bold text-2xl">3.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800"><span class="font-bold text-2xl">4.</span>
+                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <div class="flex justify-between">
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Check portfolio</button>
+                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Call us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="fixed bottom-10 right-10 flex gap-4 z-50">
+                <a href="https://wa.me/0036709403244">
+                    <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
+                        <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="w-14 h-14 bg-Darkblue dark:bg-white rounded-full flex items-center justify-center" title="Live chat">
+                        <i class="fa-solid fa-comment cursor-pointer text-white dark:text-Darkblue text-3xl"></i>
+                    </div>
+                </a>
+            </div>
+            <footer>
+                <nav class="pb-20 px-3 lg:px-40 lg:py-20 lg:mb-0">
+                    <div class="flex flex-col items-center pb-10 lg:hidden">
+                        <img class="block max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                        <img class="block dark:hidden max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-light-logo-mobile">
+                    </div>
+                    <ul class="flex justify-between items-center lg:gap-10 w-full">
+                        <div class="basis-1/2 lg:basis-96">
+                            <ul class="flex justify-around items-center gap-4">
+                                <li class="text-sm lg:text-lg">
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500" href="index.html">About 23MSG</a>
+                                </li>
+                                <li class="text-sm lg:text-lg">
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="portfolio.html">Portfolio</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li class="lg:flex gap-5 lg:flex-col lg:items-center lg:w-72 hidden lg:basis-96">
+                            <!-- <h3 class="text-6xl"><span class="font-Hurmebold">23</span>MSG</h3>
+                            <h4 class="text-xl">Media Services Group</h4> -->
+                            <img class="max-w-[144px] dark:block" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                            <img class="max-w-[144px] dark:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                            <div class="flex flex-col justify-center items-center text-center text-xs">
+                                <p>@ Copyright 2022 | 23MSG Media Services Group</p>
+                                <span>All rights reserved.</span>
+                            </div>
+                        </li>
+                        <div class="basis-1/2 lg:basis-96">
+                            <ul class="flex justify-around items-center">
+                                <li class="text-sm lg:text-lg">
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="blog.html">Blog</a>
+                                </li>
+                                <li class="text-sm lg:text-lg">
+                                    <a class="hover:text-Lightblue dark:hover:text-yellow-500"  href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+    <script src="/dist/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

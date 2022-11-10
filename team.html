@@ -9,53 +9,71 @@ x-init="
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/output.css">
+    <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
     <title>23MSG | Media Sevices Group</title>
     <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
 </head>
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="font-Hurmethin">
+<body class="font-Hurmethin"x-cloak>
     <div :class="{'dark': darkMode === false}">
         <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
             <nav class="flex justify-between p-10" x-data="{navbar: false}">
-                <a class="hidden lg:dark:block" href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-                </a>
-                <a class="hidden lg:block"
-                 href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-                </a>
-                <a class="hidden dark:block"
+               <a class="hidden dark:md:block" 
                 href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
                 </a>
-                <a href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                <a class="hidden dark:md:hidden md:block"
+                 href="index.html">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+                </a>
+                <a class="hidden dark:block dark:md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                </a>
+                <a class="block dark:hidden md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="team.html">About 23MSG</a>
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="team.html">About 23MSG
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="portfolio.html">Portfolio</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="portfolio.html">Portfolio
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>   
                     <li class="">
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="contact.html">Contact</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="contact.html">Contact
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="blog.html">Blog</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="blog.html">Blog
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <div class="flex justify-end items-center space-x-2">
+                        <div class="justify-center pt-2 cursor-pointer hidden xl:flex bg-Lightblue text-white rounded-full w-10 h-10">
+                        <a class="" href="https://wa.me/0036709403244">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-end items-center">
                             <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
-                            <div class="toggle-dot bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
+                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform transition-all duration-300 ease-in-out dark:translate-x-6"></div>
                             </label>
-                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @change="darkMode = !darkMode" />
+                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @click="darkMode = !darkMode">
                         </div>
                     </li>
                 </ul>
@@ -93,8 +111,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '1'">
                                 <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96" src="/img/eniko.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                                class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Hencz Enikő</h4>
@@ -106,8 +124,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '2'">
                                 <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/barna.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal"></div>
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
                                 <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Hérán Barna</h4>
@@ -119,8 +137,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '3'">
                                 <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/lili.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Pál Lili</h4>
@@ -132,8 +150,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '4'">
                                 <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/arnold.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Galaczi Arnold</h4>
@@ -145,8 +163,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '5'">
                                 <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/evelin.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Király Evelin</h4>
@@ -158,8 +176,8 @@ x-init="
                         <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '6'">
                                 <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96" src="/img/norbi.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl"></div>
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Kecskés Nobert</h4>
@@ -170,8 +188,9 @@ x-init="
                         </div>
                     </div>
                 </section>
+                
             <footer>
-                <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+                <nav class="pb-20 px-3 lg:px-40 lg:py-20 lg:mb-0">
                      <div class="flex flex-col items-center pb-10 lg:hidden">
                         <img class="block max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                         <img class="block dark:hidden max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-light-logo-mobile">

@@ -16,40 +16,50 @@ x-init="
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="font-Hurmethin">
+<body class="font-Hurmethin" x-cloak>
     <div :class="{'dark': darkMode === false}">
         <div class="tracking-widest font-Hurmethin lg:overflow-x-hidden text-Darkblue dark:bg-Darkblue dark:text-white">
             <nav class="flex justify-between p-10" x-data="{navbar: false}">
-                <a class="hidden lg:dark:block" href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
-                </a>
-                <a class="hidden lg:block"
-                 href="index.html">
-                    <img class="cursor-pointer lg:max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
-                </a>
-                <a class="hidden dark:block"
+               <a class="hidden dark:md:block" 
                 href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo.png" alt="23MSG-company-light-logo-desktop">
                 </a>
-                <a href="index.html">
-                    <img class="max-w-[97px] lg:hidden" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
+                <a class="hidden dark:md:hidden md:block"
+                 href="index.html">
+                    <img class="cursor-pointer max-w-[250px]" src="/assets/23MediaServicesGrouplogo_dark.png" alt="23MSG-company-dark-logo-desktop">
+                </a>
+                <a class="hidden dark:block dark:md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
+                </a>
+                <a class="block dark:hidden md:hidden"
+                href="index.html">
+                    <img class="max-w-[97px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-dark-logo-mobile">
                 </a>
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="team.html">About 23MSG</a>
+                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="team.html">About 23MSG
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="portfolio.html">Portfolio</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="portfolio.html">Portfolio
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>   
                     <li class="">
-                        <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="contact.html">Contact</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="contact.html">Contact
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
-                         <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue dark:hover:text-yellow-500"
-                        href="blog.html">Blog</a>
+                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
+                        href="blog.html">Blog
+                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
+                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
                         <div class="justify-center pt-2 cursor-pointer hidden xl:flex bg-Lightblue text-white rounded-full w-10 h-10">
@@ -59,11 +69,11 @@ x-init="
                         </div>
                     </li>
                     <li>
-                        <div class="flex justify-end items-center space-x-2">
+                        <div class="flex justify-end items-center">
                             <label for="toggle" class="w-[53px] h-[30px] flex items-center border-2 border-Lightblue rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-Darkblue">
-                            <div class="toggle-dot bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-6"></div>
+                            <div class="bg-Lightblue dark:bg-white w-[18px] h-[18px] rounded-full shadow-md transform transition-all duration-300 ease-in-out dark:translate-x-6"></div>
                             </label>
-                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @change="darkMode = !darkMode" />
+                            <input id="toggle" type="checkbox" class="hidden" :value="darkMode" @click="darkMode = !darkMode">
                         </div>
                     </li>
                 </ul>
@@ -131,19 +141,19 @@ x-init="
                             <div class="flex flex-col gap-5 text-base">
                                 <div>
                                     <label class="" for="">Name</label>
-                                    <input class="w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
+                                    <input class="block max-w-lg md:w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
                                 </div>
                                 <div>
                                     <label class="" for="">Email</label>
-                                    <input class="w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
+                                    <input class="block max-w-lg md:w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
                                 </div>
                                 <div>
                                     <label class="" for="">Phone Number</label>
-                                    <input class="w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
+                                    <input class="block max-w-lg md:w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
                                 </div>
                                 <div>
                                     <label class="" for="">Message</label>
-                                    <input class="w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
+                                    <input class="block max-w-lg md:w-full bg-transparent border-l-0 border-r-0 border-t-0 border-4 border-divideGray border-opacity-[0.11] dark:border-opacity-100 outline-0" type="text">
                                 </div>
                             </div>
                             <div class="flex items-center justify-center my-16 lg:my-20">
@@ -156,7 +166,7 @@ x-init="
             <div class="fixed bottom-10 right-10 flex gap-4 z-50">
                 <a href="https://wa.me/0036709403244">
                     <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
-                        <i class="fa-brands fa-whatsapp cursor-pointer text-3xl"></i>
+                        <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
                     </div>
                 </a>
                 <a href="">
@@ -166,7 +176,7 @@ x-init="
                 </a>
             </div>
             <footer>
-                <nav class="pb-20 px-3 lg:px-40 lg:py-20 mb-10 lg:mb-0">
+                <nav class="pb-20 px-3 lg:px-40 lg:py-20 lg:mb-0">
                      <div class="flex flex-col items-center pb-10 lg:hidden">
                         <img class="block max-w-[144px]" src="/assets/23MSGlogo.png" alt="23MSG-company-light-logo-mobile">
                         <img class="block dark:hidden max-w-[144px]" src="/assets/23MSGlogo_dark.png" alt="23MSG-company-light-logo-mobile">
