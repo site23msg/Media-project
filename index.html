@@ -455,14 +455,14 @@ x-init="
                 </section> -->
                 <section class="teamsec px-7 lg:px-20" x-data="{img: false}">
                     <div class="my-20 flex items-center justify-center">
-                        <div class="flex flex-col items-center justify-center text-center text-5xl xl:text-7xl font-Hurmebold">
+                        <div class="flex flex-col items-center justify-center text-center text-2xl lg:text-5xl xl:text-7xl font-Hurmebold" data-aos="fade-right" data-aos-duration="3000">
                             <h2>Team work</h1>
                             <h2>makes<span class="text-Lightblue"> the dream </span>work!</h2>
                             <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5 mb-10" @mouseover.away="img = '0'">
-                        <div class="justify-center items-center rounded-3xl flex flex-col cursor-pointer">
+                        <div class="justify-center items-center rounded-3xl flex flex-col cursor-pointer" data-aos="fade-right" data-aos-duration="3000">
                             <div class="relative" @mouseover="img = '1'">
                                 <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
@@ -476,7 +476,7 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '2'">
+                            <div class="relative" @mouseover="img = '2'" data-aos="fade-down" data-aos-duration="3000">
                                 <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
@@ -489,7 +489,7 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '3'">
+                            <div class="relative" @mouseover="img = '3'" data-aos="fade-left" data-aos-duration="3000">
                                 <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
@@ -502,7 +502,7 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '4'">
+                            <div class="relative" @mouseover="img = '4'" data-aos="fade-right" data-aos-duration="3000">
                                 <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
@@ -515,7 +515,7 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '5'">
+                            <div class="relative" @mouseover="img = '5'" data-aos="fade-up" data-aos-duration="3000">
                                 <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
@@ -528,7 +528,7 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '6'">
+                            <div class="relative" @mouseover="img = '6'" data-aos="fade-left" data-aos-duration="3000">
                                 <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
                                 class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>

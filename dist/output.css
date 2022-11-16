@@ -1920,6 +1920,11 @@ video {
     line-height: 1.5rem;
   }
 
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .scrollbar.lg\:overflow-x-hidden {
     overflow-x: hidden;
   }
