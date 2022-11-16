@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "alpinejs": "^3.10.4",
     "aos": "^2.3.4",
     "esbuild": "^0.15.10"

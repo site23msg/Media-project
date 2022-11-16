@@ -54,26 +54,18 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
 
-  var swiper2 = new Swiper(".mySwiper2", {
-    cssMode: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      mousewheel: true,
-      keyboard: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-      },
-        1280: {
-        slidesPerView: 2,
-      },
-    }
+  var swiper = new Swiper(".mySwiper2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
+
 
 

@@ -12,9 +12,10 @@ x-init="
     <script src="https://kit.fontawesome.com/62acec9a23.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <title>23MSG | Media Sevices Group</title>
-    <meta name="themecolor">
-    <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose"/>
+    <meta name="description" content="This is the welcome page of the 23MSG Media Services Group Team here you can understand what is our purpose.">
 </head>
 <style>
     [x-cloak] { display: none !important; }
@@ -42,25 +43,19 @@ x-init="
                 <ul class="hidden lg:flex lg:items-center gap-5 xl:gap-10 text-lg font-Hurmethin">
                     <li>
                         <a class="dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
-                        href="team.html">About 23MSG
+                        href="team.html">Our team
                         <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
                         <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
-                    </li>
-                    <li>
-                        <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
-                        href="portfolio.html">Portfolio
-                        <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
-                        <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
-                    </li>   
+                    </li>  
                     <li class="">
                         <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
-                        href="contact.html">Contact
+                        href="contact.html">What we do?
                         <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
                         <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
                     <li>
                         <a class="anchor dark:border dark:border-transparent dark:active:border-Lightblue py-2 px-6 rounded-full active:bg-Lightblue dark:active:bg-transparent active:text-white hover:text-Lightblue relative group"
-                        href="blog.html">Blog
+                        href="graphic.html">Contact
                         <span class="absolute -bottom-1 left-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span>
                         <span class="absolute -bottom-1 right-1/2 w-0 h-1 bg-blue-600 group-hover:w-1/2 group-hover:transition-all group-hover:duration-500"></span></a>
                     </li>
@@ -89,112 +84,166 @@ x-init="
                 class="lg:hidden text-Darkblue flex flex-col justify-between bg-white text-2xl px-10 py-10 h-[500px] z-50">
                     <img class="max-w-[150px] lg:hidden pb-10" src="/assets/23MSGlogo_dark.png" alt="">
                     <li>
-                        <a href="team.html">About</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html">Portfolio</a>
-                    </li>   
+                        <a href="team.html">Our Team</a>
+                    </li>  
                     <li class="">
-                        <a  href="blog.html">Blog</a>
+                        <a  href="blog.html">Contact</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">what we do?</a>
                     </li>
                 </ul>
             </nav>
             <main class="px-7 md:px-32 lg:px-20 xl:px-40">
-                <h1 class="flex justify-center gap-6 items-center font-bold text-5xl lg:text-8xl lg:text-center mt-20 mb-28">GRAPHIC AND WEB</h1>
+                <h1 class="flex justify-center gap-6 items-center font-bold text-5xl lg:text-8xl text-center mt-20 mb-28">WHAT ARE ARE GOOD AT</h1>
                 <div>
-                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center pb-10" data-aos="fade-right" data-aos-duration="3000">WEB DESIGN</h2>
+                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center my-20" data-aos="fade-right" data-aos-duration="3000">WEB DESIGN</h2>
                     <div class="grid grid-cols-1 gap-20 xl:grid-cols-2 lg:p-10 rounded-md py-10">
-                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Landing page</h3>
-                            <img class="rounded-md object-fill" src="/img/website1.png" alt="pohoto_of_landing_page_23msg">
+                        <div>
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/agrohof_mockup.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/aardenburg_mockup.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
-                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200">
-                            SEO optimized and specific requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400">
-                            Pages built unique, depends on requirements<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600">
-                            Buil-in extensions<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
+                        <div class="max-h-[390px] flex flex-col justify-between gap-y-8 text-Lightgraytoggle dark:text-Darkblue rounded-md">
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200">
+                            SEO optimized content creation<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400">
+                            Develop based on customer requirements<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600">
+                            Responsice design, content upload<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
                             Responsive design, compatible with every screens <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <div class="flex justify-between">
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Check portfolio</button>
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Call us</button>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
+                            Website domain and storage managing<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                        </div>
+                    </div>
+                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center my-20" data-aos="fade-right" data-aos-duration="3000">GRAPHIC DESIGN</h2>
+                    <div class="grid grid-cols-1 gap-20 xl:grid-cols-2 lg:p-10 rounded-md py-10">
+                        <div class="flex flex-col justify-between gap-y-10 text-Lightgraytoggle dark:text-Darkblue rounded-md">
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="200">
+                            Landing page design <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="400">
+                            Branding design from A to Z (LOGO, BUISNESS CARD etc.)<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="600">
+                            Company catalog, Product catalog<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="800">
+                            Social media posts (pictures, videos, stories etc.) <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="800">
+                            Unlimited revisions, based on contract<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                        </div>
+                        <div>
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper max-h-[390px]">
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/website_agro.png" alt="pohoto_of_landing_page_23msg">
+                                     </div>
+                                     <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/webshop.png" alt="pohoto_of_landing_page_23msg">
+                                     </div>
+                                     <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/kotelek.png" alt="pohoto_of_landing_page_23msg">
+                                     </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/10.jpg" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/407.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/catalog.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/catalog1.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
+                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center my-20" data-aos="fade-right" data-aos-duration="3000">PHOTO AND VIDEO</h2>
                     <div class="grid grid-cols-1 gap-20 xl:grid-cols-2 lg:p-10 rounded-md py-10">
-                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200">
-                            Logo design<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400">
-                            Name cards <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600">
-                            Font styles, colors etc. <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
-                            Social media covers <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <div class="flex justify-between">
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Check portfolio</button>
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Call us</button>
+                        <div>
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper max-h-[390px]">
+                                    <div class="swiper-slide flex flex-col gap-5 aspect-w-16 aspect-h-9">
+                                        <iframe class="rounded-md" src="https://www.youtube.com/embed/4kKZxVNAmdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5 aspect-w-16 aspect-h-9 cursor-pointer">
+                                        <img src="/img/thumb_shorts.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5 aspect-w-16 aspect-h-9">
+                                        <iframe class="rounded-md" src="https://www.youtube.com/embed/YsgW0l_f1o0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="swiper-slide aspect-w-16 aspect-h-9">
+                                        <iframe class="rounded-md" src="https://www.youtube.com/embed/Lq2vJ85CRj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Branding for your company</h3>
-                            <img class="rounded-md max-h-[400px]" src="/img/10.jpg" alt="pohoto_of_landing_page_23msg">
+                        <div class="flex flex-col justify-between gap-y-10 text-Lightgraytoggle dark:text-Darkblue rounded-md">
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200">
+                            High quality videos with and drone shots <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400">
+                            Product presentation video shoot<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600">
+                            Managing your video sharing platforms<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
+                            You dream it, we make it!<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
                         </div>
                     </div>
+                    <h2 class="text-center text-3xl lg:text-7xl font-Hurmebold flex justify-center items-center my-20" data-aos="fade-right" data-aos-duration="3000">SOCIAL MEDIA MANAGEMENT</h2>
                     <div class="grid grid-cols-1 gap-20 xl:grid-cols-2 lg:p-10 rounded-md py-10">
-                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Media marketing</h3>
-                            <img class="rounded-md" src="/img/website2.png" alt="pohoto_of_landing_page_23msg">
+                        <div class="flex flex-col justify-between gap-y-8 text-Lightgraytoggle dark:text-Darkblue rounded-md">
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="200">
+                            Content plan for your buisness<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="400">
+                            Build community<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="600">
+                            Managing advertisement platforms<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="800">
+                            Create blogs, content and graphics<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
+                            <p class="bg-Darkblue dark:bg-Lightgraytoggle p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-right" data-aos-duration="800">
+                            Unique banners, handle marketing profiles<i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>    
                         </div>
-                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200">
-                            Create specfied pages(Facebook, Instagram etc.) <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400">
-                            Graphic design for posts on social media pages <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600">
-                            Write posts related on requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800">
-                            Creating excellent planes for content display <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <div class="flex justify-between">
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Check portfolio</button>
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full font-Hurmethin">Call us</button>
+                        <div>
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper max-h-[378px]">
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/youtube_mockup1.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/facebook_mockup1.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                    <div class="swiper-slide flex flex-col gap-5">
+                                        <img class="rounded-md" src="/img/instagram_mockup1.png" alt="pohoto_of_landing_page_23msg">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 gap-20 xl:grid-cols-2 lg:p-10 rounded-md py-10">
-                        <div class="flex flex-col gap-y-10 text-Darkblue dark:text-white rounded-md">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Details</h3>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="200"><span class="font-bold text-2xl hidden">1.</span>
-                            Create specfied pages(Facebook, Instagram etc.) <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="400"><span class="font-bold text-2xl hidden">2.</span>
-                            Graphic design for posts on social media pages <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="600"><span class="font-bold text-2xl hidden">3.</span>
-                            Write posts related on requirements <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <p class="bg-Darkgray dark:bg-Lightgraytoggle text-white dark:text-Darkblue p-2 rounded-md flex justify-between items-center font-bold gap-2" data-aos="fade-left" data-aos-duration="800"><span class="font-bold text-2xl hidden">4.</span>
-                            Creating excellent planes for content display <i class="fa-regular fa-circle-check dark:text-Lightblue text-3xl"></i></p>
-                            <div class="flex justify-between">
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Check portfolio</button>
-                                <button class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xs lg:text-xl rounded-full font-Hurmethin">Call us</button>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-y-10 rounded-md" data-aos="zoom-in" data-aos-duration="3000">
-                            <h3 class="font-Hurmebold text-2xl xl:text-3xl">Video and photo creating</h3>
-                            <img class="rounded-md object-fill" src="/img/website2.png" alt="pohoto_of_landing_page_23msg">
                         </div>
                     </div>
                 </div>
             </main>
             <div class="fixed bottom-10 right-10 flex gap-4 z-50">
                 <a href="https://wa.me/0036709403244">
-                    <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
+                    <div class="w-14 h-14 bg-lime-800 hover:bg-Darkblue rounded-full flex items-center justify-center" title="WhatsUp">
                         <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
                     </div>
                 </a>
@@ -247,6 +296,7 @@ x-init="
         </div>
     </div>
     <script src="/dist/app.js"></script>
+    <script src="/swiper.js"></script>
     <script>
         AOS.init();
     </script>
