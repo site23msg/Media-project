@@ -90,11 +90,11 @@ x-init="
                     <li>
                         <a href="team.html">Our Team</a>
                     </li>  
-                    <li class="">
-                        <a  href="blog.html">Contact</a>
-                    </li>
                     <li>
-                        <a href="contact.html">what we do?</a>
+                        <a href="graphic.html">What we do?</a>
+                    </li>
+                    <li class="">
+                        <a  href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -107,7 +107,7 @@ x-init="
                         <div class="max-w-xl flex flex-col items-center lg:items-start gap-14">
                             <h1 class="text-6xl text-center lg:text-6xl xl:text-8xl lg:text-left font-bold" data-aos="fade-right" data-aos-duration="3000">Welcome at 23MSG!</h1>
                             <div data-aos="fade-right" data-aos-duration="3000">
-                                <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" href="team.html">About us</a>
+                                <a class="team border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" href="#">About us</a>
                             </div>
                         </div>
                         <div class="hidden lg:block" data-aos="zoom-in" data-aos-duration="3000">
@@ -153,7 +153,7 @@ x-init="
                             </div>
                         </div>
                         <div class="text-center py-20" data-aos="fade-right" data-aos-duration="3000">
-                            <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" href="graphic.html">Discover more</a>
+                            <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" href="graphic.html">What we do?</a>
                         </div>
                     </div>
                 </section>
@@ -461,24 +461,25 @@ x-init="
                             <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5 mb-10" @mouseover.away="img = '0'">
-                        <div class="justify-center items-center rounded-3xl flex flex-col cursor-pointer" data-aos="fade-right" data-aos-duration="3000">
+                    <div class="flex flex-wrap items-center justify-center gap-y-20 gap-x-5 mb-10 lg:justify-between" @mouseover.away="img = '0'">
+                        <div class="justify-center items-center rounded-3xl flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '1'">
                                 <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                                class="rounded-3xl object-cover w-72 h-72 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500">
+                                </div>
                                 <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Hencz Enikő</h4>
                                 </a>
                                 <p class="text-md lg:text-md">Graphics designer</p>
-                            </div>
+                                </div>
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '2'" data-aos="fade-down" data-aos-duration="3000">
+                            <div class="relative" @mouseover="img = '2'">
                                 <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
                                 <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -489,22 +490,22 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '3'" data-aos="fade-left" data-aos-duration="3000">
+                            <div class="relative" @mouseover="img = '3'">
                                 <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Pál Lili</h4>
                                 </a>
                                 <p class="text-md lg:text-md">Content migration</p>
-                            </div>
+                                </div>
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '4'" data-aos="fade-right" data-aos-duration="3000">
+                            <div class="relative" @mouseover="img = '4'">
                                 <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -515,9 +516,9 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '5'" data-aos="fade-up" data-aos-duration="3000">
+                            <div class="relative" @mouseover="img = '5'">
                                 <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -528,9 +529,9 @@ x-init="
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '6'" data-aos="fade-left" data-aos-duration="3000">
+                            <div class="relative" @mouseover="img = '6'">
                                 <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
+                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -545,7 +546,7 @@ x-init="
             </main>
             <div class="fixed bottom-10 right-10 flex gap-4 z-50">
                 <a href="https://wa.me/0036709403244">
-                    <div class="w-14 h-14 bg-lime-800 hover:bg-Darkblue rounded-full flex items-center justify-center" title="WhatsUp">
+                    <div class="w-14 h-14 bg-lime-800 hover:bg-Darkblue rounded-full flex items-center justify-center" title="Whatsapp">
                         <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
                     </div>
                 </a>

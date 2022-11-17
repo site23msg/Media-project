@@ -120,16 +120,20 @@
 // })
 
 
-const anchorTeam = document.querySelector('.team')
+const anchorTeam = document.querySelectorAll('.team')
 const anchorWhatWeDo = document.querySelector('.whatwedo')
 const sectionTeam = document.querySelector('.teamsec')
 const sectionWhatWeDo = document.querySelector('.whatwedosec')
 
-anchorTeam.addEventListener('click', (e) => {
-    e.preventDefault();
-    sectionTeam.scrollIntoView({
-        block:'center',
-        behavior: 'smooth'
+
+anchorTeam.forEach( anchor => {
+    anchor.addEventListener('click', (e) => {
+        e.preventDefault()
+        console.log(e.target)
+        sectionTeam.scrollIntoView({
+            block:'center',
+            behavior: 'smooth'
+        })
     })
 })
 

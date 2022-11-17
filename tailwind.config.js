@@ -24,7 +24,4 @@ module.exports = {
     require('tailwind-scrollbar'),
     require('@tailwindcss/aspect-ratio')
   ],
-  variants: {
-    scrollbar: ['rounded'],
-  },
 }

@@ -83,114 +83,114 @@ x-init="
                         <a href="team.html">Our Team</a>
                     </li>  
                     <li class="">
-                        <a  href="blog.html">Contact</a>
+                        <a  href="contact.html">Contact</a>
                     </li>
                     <li>
-                        <a href="contact.html">what we do?</a>
+                        <a href="contact.html">What we do?</a>
                     </li>
                 </ul>
             </nav>
-                <section class="px-7 lg:px-20 xl:px-40" x-data="{img: false}">
-                    <div class="my-20 flex items-center justify-center">
-                        <div class="flex flex-col items-center justify-center text-center text-5xl xl:text-8xl font-Hurmebold">
-                            <h1>Team work</h1>
-                            <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
-                            <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
-                        </div>
+            <section class="px-7 lg:px-20 xl:px-40" x-data="{img: false}">
+                <div class="my-20 flex items-center justify-center">
+                    <div class="flex flex-col items-center justify-center text-center text-5xl xl:text-8xl font-Hurmebold">
+                        <h1>Team work</h1>
+                        <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
+                        <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5 mb-10" @mouseover.away="img = '0'">
-                        <div class="xl:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '1'">
-                                <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
-                                <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Hencz Enikő</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Graphics designer</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '2'">
-                                <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
-                                <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Hérán Barna</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Product manager</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '3'">
-                                <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
-                                <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Pál Lili</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Content migration</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '4'">
-                                <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
-                                <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Galaczi Arnold</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Frontend developer</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '5'">
-                                <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
-                                <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Király Evelin</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Graphics designer</p>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
-                            <div class="relative" @mouseover="img = '6'">
-                                <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
-                                <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
-                                <a href="">
-                                    <h4 class="font-Hurmebold text-3xl pt-10">Kecskés Nobert</h4>
-                                </a>
-                                <p class="text-md lg:text-md">Photo, video</p>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="fixed bottom-10 right-10 flex gap-4 z-50">
-                    <a href="https://wa.me/0036709403244">
-                        <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
-                            <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
-                        </div>
-                    </a>
-                    <!-- <a href="">
-                        <div class="w-14 h-14 bg-Darkblue dark:bg-white rounded-full flex items-center justify-center" title="Live chat">
-                            <i class="fa-solid fa-comment cursor-pointer text-white dark:text-Darkblue text-3xl"></i>
-                        </div>
-                    </a> -->
                 </div>
+                <div class="flex flex-wrap items-center justify-center lg:justify-between gap-y-20 gap-x-5 mb-10" @mouseover.away="img = '0'">
+                    <div class="xl:basis-1/4 justify-center items-center rounded-3xl flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '1'">
+                            <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                            <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Hencz Enikő</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Graphics designer</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '2'">
+                            <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
+                            <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Hérán Barna</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Product manager</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '3'">
+                            <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                            <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Pál Lili</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Content migration</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '4'">
+                            <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                            <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Galaczi Arnold</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Frontend developer</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '5'">
+                            <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                            <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Király Evelin</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Graphics designer</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="xl:basis-1/4 justify-center items-center flex flex-col cursor-pointer">
+                        <div class="relative" @mouseover="img = '6'">
+                            <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
+                            class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-96 lg:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
+                            <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
+                            <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
+                            <a href="">
+                                <h4 class="font-Hurmebold text-3xl pt-10">Kecskés Nobert</h4>
+                            </a>
+                            <p class="text-md lg:text-md">Photo, video</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="fixed bottom-10 right-10 flex gap-4 z-50">
+                <a href="https://wa.me/0036709403244">
+                    <div class="w-14 h-14 bg-lime-800 rounded-full flex items-center justify-center" title="Call us">
+                        <i class="fa-brands fa-whatsapp cursor-pointer text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- <a href="">
+                    <div class="w-14 h-14 bg-Darkblue dark:bg-white rounded-full flex items-center justify-center" title="Live chat">
+                        <i class="fa-solid fa-comment cursor-pointer text-white dark:text-Darkblue text-3xl"></i>
+                    </div>
+                </a> -->
+            </div>
             <footer>
                 <nav class="pb-20 px-3 lg:px-40 lg:py-20 lg:mb-0">
                      <div class="flex flex-col items-center pb-10 lg:hidden">
