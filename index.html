@@ -384,7 +384,7 @@ x-init="
                     <div class="flex flex-wrap items-center justify-center gap-y-20 lg:gap-10 xl:justify-between xl:gap-20">
                         <div class="graphic project flex flex-col items-center lg:items-start">
                             <a data-name="bauhof"  href="">
-                                <img class="rounded-3xl object-cover w-72 h-72 lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
+                                <img class="rounded-3xl object-cover lg:w-96 lg:h-96 hover:opacity-75 transition ease-in-out duration-300 hover:transform hover:scale-[1.1]" src="/img/R2P_BRANDING.PNG" alt="project-photo-about-r2p-branding">
                             </a>
                             <div class="pl-8">
                                 <a href="projectUp.html">
@@ -453,33 +453,32 @@ x-init="
                         <a class="border border-blue-600 bg-Lightblue dark:bg-transparent text-white py-2 px-6 text-xl rounded-full" href="#">More projects</a>
                     </div>
                 </section> -->
-                <section class="teamsec px-7 lg:px-20" x-data="{img: false}">
+                <section class="teamsec px-7" x-data="{img: false}">
                     <div class="my-20 flex items-center justify-center">
-                        <div class="flex flex-col items-center justify-center text-center text-2xl lg:text-5xl xl:text-7xl font-Hurmebold" data-aos="fade-right" data-aos-duration="3000">
-                            <h2>Team work</h1>
-                            <h2>makes<span class="text-Lightblue"> the dream </span>work!</h2>
+                        <div class="flex flex-col items-center justify-center text-center text-5xl xl:text-8xl font-Hurmebold">
+                            <h1>Team work</h1>
+                            <h1>makes<span class="text-Lightblue"> the dream </span>work!</h1>
                             <p class="text-center text-lg max-w-7xl lg:px-20 py-20 font-Hurmethin">We are 23MSG the Media Services Group. A trending, young media agency, with a modern vision. Our main goal is to get out the of our customer's needs.</p>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-20" @mouseover.away="img = '0'">
+                    <div class="flex flex-wrap justify-center gap-10 lg:gap-16 xl:gap-20 mb-10" @mouseover.away="img = '0'">
                         <div class="justify-center items-center rounded-3xl flex flex-col cursor-pointer">
-                            <div class="relative col-span-1" @mouseover="img = '1'">
+                            <div class="relative" @mouseover="img = '1'">
                                 <img :class="img == '1' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/eniko.png" alt="project_photo">
-                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500">
-                                </div>
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
+                                <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '1' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Hencz Enikő</h4>
                                 </a>
                                 <p class="text-md lg:text-md">Graphics designer</p>
-                                </div>
+                            </div>
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '2'">
                                 <img :class="img == '2' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/barna.png" alt="project_photo">
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto object-cover hover:opacity-100 transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl bg-blend-color mix-blend-normal transition ease-linear duration-500"></div>
                                 <div :class="img == '2' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -492,20 +491,20 @@ x-init="
                         <div class="justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '3'">
                                 <img :class="img == '3' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/lili.png" alt="project_photo">
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto object-cover hover:opacity-100 transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '3' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
                                     <h4 class="font-Hurmebold text-3xl pt-10">Pál Lili</h4>
                                 </a>
                                 <p class="text-md lg:text-md">Content migration</p>
-                                </div>
+                            </div>
                             </div>
                         </div>
                         <div class="justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '4'">
                                 <img :class="img == '4' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/arnold.png" alt="project_photo">
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto object-cover hover:opacity-100 transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '4' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -518,7 +517,7 @@ x-init="
                         <div class="justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '5'">
                                 <img :class="img == '5' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/evelin.png" alt="project_photo">
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto object-cover hover:opacity-100 transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '5' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">
@@ -531,7 +530,7 @@ x-init="
                         <div class="justify-center items-center flex flex-col cursor-pointer">
                             <div class="relative" @mouseover="img = '6'">
                                 <img :class="img == '6' ? 'opacity-100' : 'opacity-[0.66]'"
-                                class="rounded-3xl object-cover w-72 h-72 hover:opacity-100 lg:w-80 lg:h-80 xl:w-96 xl:h-96 transition ease-linear duration-500" src="/img/norbi.png" alt="project_photo">
+                                class="rounded-3xl w-[275px] lg:w-[300px] xl:w-auto object-cover hover:opacity-100 transition ease-linear duration-500" src="https://picsum.photos/375/375" alt="project_photo">
                                 <div class="absolute inset-0 backdrop-blur-[4px] hover:backdrop-blur-0 rounded-3xl transition ease-linear duration-500"></div>
                                 <div :class="img == '6' ? 'hidden' : 'absolute left-6 bottom-6'">
                                 <a href="">

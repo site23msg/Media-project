@@ -715,12 +715,12 @@ video {
   margin-bottom: 7rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .block {
@@ -795,6 +795,10 @@ video {
   height: 18rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .max-h-\[390px\] {
   max-height: 390px;
 }
@@ -859,6 +863,10 @@ video {
   width: 50%;
 }
 
+.w-\[275px\] {
+  width: 275px;
+}
+
 .max-w-\[250px\] {
   max-width: 250px;
 }
@@ -887,6 +895,10 @@ video {
   max-width: 80rem;
 }
 
+.max-w-\[370px\] {
+  max-width: 370px;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -901,6 +913,10 @@ video {
 
 .basis-1\/4 {
   flex-basis: 25%;
+}
+
+.basis-96 {
+  flex-basis: 24rem;
 }
 
 .-translate-x-72 {
@@ -1160,6 +1176,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-10 {
@@ -1753,12 +1774,16 @@ video {
     height: 24rem;
   }
 
+  .lg\:h-80 {
+    height: 20rem;
+  }
+
   .lg\:h-\[550px\] {
     height: 550px;
   }
 
-  .lg\:h-80 {
-    height: 20rem;
+  .lg\:h-60 {
+    height: 15rem;
   }
 
   .lg\:max-h-\[250px\] {
@@ -1781,8 +1806,20 @@ video {
     width: 20rem;
   }
 
+  .lg\:w-60 {
+    width: 15rem;
+  }
+
+  .lg\:w-\[300px\] {
+    width: 300px;
+  }
+
   .lg\:max-w-\[550px\] {
     max-width: 550px;
+  }
+
+  .lg\:max-w-\[300px\] {
+    max-width: 300px;
   }
 
   .lg\:basis-96 {
@@ -1791,10 +1828,6 @@ video {
 
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -1827,6 +1860,10 @@ video {
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
   }
 
   .lg\:gap-x-5 {
@@ -1934,10 +1971,6 @@ video {
     height: 24rem;
   }
 
-  .xl\:h-80 {
-    height: 20rem;
-  }
-
   .xl\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -1950,8 +1983,12 @@ video {
     width: 24rem;
   }
 
-  .xl\:w-80 {
-    width: 20rem;
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-auto {
+    width: auto;
   }
 
   .xl\:max-w-\[1000px\] {
@@ -1988,6 +2025,10 @@ video {
 
   .xl\:gap-20 {
     gap: 5rem;
+  }
+
+  .xl\:gap-y-20 {
+    row-gap: 5rem;
   }
 
   .xl\:px-40 {
